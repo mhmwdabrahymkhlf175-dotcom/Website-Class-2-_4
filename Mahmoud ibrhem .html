@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="Mahmoud  (1).jpg" type="image/x-icon">
+  <meta name="description" content="Free Web tutorials Welcome To WE School Class 2/4">
+  <meta name="outhor" content="Engineer Mahmoud ibrahem">
+  <meta name="keywords" content="Html,css,JS,Coding Html and css">
+  <title>Eng Mahmoud Ibrahim - Portfolio</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      scroll-behavior: smooth;
+      background: #0a0a0a;
+      color: #fff;
+      margin: 0;
+    }
+
+    /* Navbar */
+    .navbar {
+      background: rgba(0, 0, 0, 0.85);
+    }
+
+
+    .offcanvas-body a:hover {
+      color: #00ff99;
+      transition: 0.3s;
+    }
+
+    /* Hero Section */
+    .hero {
+      min-height: 90vh;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      padding: 40px 20px;
+      color: #fff;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #00ff99;
+      text-shadow: 0 0 10px #00ff99, 0 0 20px #00ff99;
+    }
+
+    .hero p {
+      font-size: 1rem;
+      margin-top: 10px;
+      color: #f0f0f0;
+    }
+
+    /* Profile Image with Dashed Animated Border */
+    .profile-container {
+      position: relative;
+      margin-top: 20px;
+    }
+
+    .profile-container img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      z-index: 2;
+      position: relative;
+    }
+
+    /*.profile-container::before {
+      content: '';
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      width: 73vh;
+      height: 73vh;
+      border-radius: 50%;
+      border: 50px dashed #00ff99;
+      z-index: 1;
+      animation: rotateBorder 3s linear infinite;
+    }
+
+    @keyframes rotateBorder {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+      */
+
+    /* Stats Numbers */
+    .stats {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: start;
+      gap: 40px;
+      margin-top: 30px;
+    }
+
+    .stat-item {
+      text-align: left;
+    }
+
+    .stat-item h3 {
+      font-size: 1.8rem;
+      color: #00ff99;
+      margin-bottom: 5px;
+    }
+
+    .stat-item p {
+      font-size: 0.9rem;
+      color: #f0f0f0;
+    }
+
+    /* Social Media Buttons */
+    .social-buttons a {
+      margin: 5px;
+      font-size: 1.2rem;
+      color: #fff;
+      padding: 10px 15px;
+      border-radius: 50px;
+      background: linear-gradient(135deg, #00ff99, #00ccff);
+      display: inline-block;
+      transition: 0.3s;
+    }
+
+    .social-buttons a:hover {
+      transform: scale(1.1);
+      color: #fff;
+    }
+
+    /* Sections */
+    .section {
+      padding: 50px 20px;
+    }
+
+    .section h2 {
+      text-align: center;
+      margin-bottom: 35px;
+      font-weight: bold;
+      color: #00ff99;
+    }
+
+    /* Cards */
+    .card-custom {
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 255, 153, 0.2);
+      transition: transform 0.3s, box-shadow 0.3s;
+      background: #111;
+      color: #f0f0f0;
+    }
+
+    .card-custom:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0, 255, 153, 0.4);
+    }
+
+    /* Buttons */
+    .btn-custom {
+      background: linear-gradient(135deg, #00ff99, #00ccff);
+      color: black;
+      border-radius: 50px;
+      padding: 10px 20px;
+      margin: 8px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn-custom:hover {
+      transform: scale(1.05);
+      color: #fff;
+    }
+
+    /* Footer */
+    footer {
+      background: #111;
+      text-align: center;
+      padding: 25px 10px;
+      color: #fff;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .profile-container img {
+        width: 160px;
+        height: 160px;
+      }
+
+      .profile-container::before {
+        width: 73vh;
+        height: 73vh;
+        top: -10px;
+        left: -10px;
+      }
+
+      .stat-item h3 {
+        font-size: 1.5rem;
+      }
+
+      .stat-item p {
+        font-size: 0.8rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero h1 {
+        font-size: 1.5rem;
+      }
+
+      .hero p {
+        font-size: 0.9rem;
+      }
+
+      .profile-container img {
+        width: 120px;
+        height: 120px;
+      }
+
+      .profile-container::before {
+        width: 73vh;
+        height: 73vh;
+        top: -10px;
+        left: -10px;
+      }
+    }
+
+    .cv-container {
+      max-width: 1000px;
+      margin: auto;
+      background: #111;
+      border-radius: 25px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0, 255, 153, 0.25);
+    }
+
+    .header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      background: linear-gradient(90deg, #00ff99, #00ccff);
+      color: #fff;
+      padding: 30px;
+      gap: 20px;
+      border-bottom-left-radius: 25px;
+      border-bottom-right-radius: 25px;
+    }
+
+    .header img {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      border: 4px solid #fff;
+      object-fit: cover;
+      transition: transform 0.3s;
+    }
+
+    .header img:hover {
+      transform: scale(1.05);
+    }
+
+    .header .info h1 {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 5px;
+      color: #00ff99;
+    }
+
+    .header .info p {
+      margin: 3px 0;
+      color: #f0f0f0;
+    }
+
+    .main-content {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .left-panel {
+      flex: 1 1 35%;
+      background: #111;
+      padding: 35px 25px;
+      min-width: 250px;
+      border-right: 1px solid #00ff99;
+    }
+
+    .right-panel {
+      flex: 1 1 65%;
+      padding: 35px 30px;
+      min-width: 300px;
+    }
+
+    .section-title {
+      font-weight: 700;
+      font-size: 18px;
+      margin-bottom: 12px;
+      color: #00ff99;
+      border-left: 5px solid #00ff99;
+      padding-left: 10px;
+      transition: color 0.3s, border-color 0.3s;
+    }
+
+    .section-title:hover {
+      color: #00ccff;
+      border-color: #00ccff;
+    }
+
+    .left-panel ul,
+    .right-panel ul {
+      padding-left: 20px;
+    }
+
+    .left-panel li,
+    .right-panel li {
+      margin-bottom: 10px;
+      font-size: 15px;
+      display: flex;
+      align-items: center;
+      color: #f0f0f0;
+    }
+
+    .left-panel li i {
+      color: #00ff99;
+      margin-right: 8px;
+    }
+
+    .small-text {
+      font-size: 14px;
+      color: #00ccff;
+    }
+
+    @media(max-width: 768px) {
+      .header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .main-content {
+        flex-direction: column;
+      }
+
+      .left-panel,
+      .right-panel {
+        flex: 1 1 100%;
+        padding: 20px;
+        border-right: none;
+        border-bottom: 1px solid #00ff99;
+      }
+    }
+
+    /* Contact Form */
+    .error {
+      color: #ff4d4d;
+      font-size: 13px;
+      display: none;
+      margin-top: -8px;
+      margin-bottom: 10px;
+    }
+
+    #contactForm .btn {
+      background: linear-gradient(90deg, #00ff99, #00ccff);
+
+      border: none;
+      color: #fff;
+      font-weight: 600;
+      transition: all 0.3s;
+    }
+
+    #contactForm .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 20px #0ff;
+    }/* Hero Image Responsive */
+.hero-img {
+  width: 260px;
+  height: 260px;
+  object-fit: cover;
+  max-width: 100%;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .hero-img {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .hero-img {
+    width: 150px;
+    height: 150px;
+  }
+}
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-dark bg-dark ">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold" href="#home">
+        <img src="Mahmoud  (1).jpg" alt="img" class="img-fluid rounded-circle shadow-lg" style="width: 100px;">
+        Eng Mahmoud Ibrahem
+      </a>
+      <!-- الروابط على الشاشات الكبيرة -->
+      <ul class="navbar-nav d-none d-lg-flex flex-row ms-auto">
+        <li class="nav-item"><a class="nav-link fw-bolder btn btn-outline-success   p-2 fs-5 active text-capitalize"
+            href="#home">Home</a>
+        </li>
+        <li class="nav-item"><a class="nav-link fw-bolder btn btn-outline-success p-2 fs-5 text-capitalize"
+            href="#about">About</a>
+        </li>
+        <li class="nav-item"><a class="nav-link fw-bolder btn btn-outline-success p-2 fs-5 text-capitalize"
+            href="#education">Education</a>
+        </li>
+        <li class="nav-item"><a class="nav-link fw-bolder btn btn-outline-success p-2 fs-5 text-capitalize"
+            href="#experience">Experience</a>
+        </li>
+        <li class="nav-item"><a class="nav-link fw-bolder btn btn-outline-success p-2 fs-5 text-capitalize"
+            href="#projects">Projects</a>
+        </li>
+        <li class="nav-item"><a class="nav-link fw-bolder btn btn-outline-success p-2 fs-5 text-capitalize"
+            href="#cv">CV</a>
+        </li>
+        <li class="nav-item"><a class="nav-link fw-bolder btn btn-outline-success p-2 fs-5 text-capitalize"
+            href="#contact">Contact</a>
+        </li>
+      </ul>
+
+      <!-- زر الثلاث شرط يظهر فقط على الشاشات الصغيرة -->
+      <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- OFFCANVAS NAVBAR -->
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar">
+    <div class="offcanvas-header">
+      <a class="navbar-brand fw-bold" href="#home">
+        <img src="Mahmoud  (1).jpg" alt="img" class="img-fluid rounded-circle shadow-lg" style="width: 100px;">
+        Eng Mahmoud Ibrahem
+      </a>
+      <!-- زر X لقفل -->
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="navbar-nav justify-content-end flex-grow-1">
+        <li class="nav-item pt-4"><a class="nav-link fw-bolder btn btn-outline-success p-2 fs-5 active text-capitalize"
+            href="#home">Home</a>
+        </li>
+        <li class="nav-item pt-4"><a class="nav-link fw-bolder btn btn-outline-success p-2 fs-5 text-capitalize"
+            href="#about">About</a>
+        </li>
+        <li class="nav-item pt-4"><a class="nav-link fw-bolder btn btn-outline-success p-2 fs-5 text-capitalize"
+            href="#education">Education</a>
+        </li>
+        <li class="nav-item pt-4"><a class="nav-link fw-bolder btn btn-outline-success p-2 fs-5 text-capitalize"
+            href="#experience">Experience</a>
+        </li>
+        <li class="nav-item pt-4"><a class="nav-link fw-bolder btn btn-outline-success p-2 fs-5 text-capitalize"
+            href="#projects">Projects</a>
+        </li>
+        <li class="nav-item pt-4"><a class="nav-link fw-bolder btn btn-outline-success p-2 fs-5 text-capitalize"
+            href="#cv">CV</a>
+        </li>
+        <li class="nav-item pt-4"><a class="nav-link fw-bolder btn btn-outline-success p-2 fs-5 text-capitalize"
+            href="#contact">Contact</a>
+        </li>
+      </ul>
+      <hr>
+      <div class="d-grid gap-2">
+        <a href="CustomerEng.html" class="btn btn-outline-primary"> Eng Evaluation Of The Website</a>
+      </div>
+    </div>
+  </div>
+  <!-- Hero Section -->
+  <section class="hero d-flex flex-column flex-md-row align-items-center justify-content-between px-4" id="home">
+    <!-- Left Side: Text -->
+    <div class="hero-text text-md-start text-center mb-4 mb-md-0" style="flex:1;">
+      <h1>Eng Mahmoud Ibrahim</h1>
+      <p>High School Student – Technology Section | WE School, Assiut</p>
+
+      <!-- Stats -->
+      <div class="stats d-flex flex-wrap justify-content-start gap-4 mt-3">
+        <div class="stat-item text-start">
+          <h3 class="counter" data-target="12">0</h3>
+          <p>Years of Experience</p>
+        </div>
+        <div class="stat-item text-start">
+          <h3 class="counter" data-target="26">0</h3>
+          <p>Projects Completed</p>
+        </div>
+        <div class="stat-item text-start">
+          <h3 class="counter" data-target="8">0</h3>
+          <p>Awards</p>
+        </div>
+        <div class="stat-item text-start">
+          <h3 class="counter" data-target="500">0</h3>
+          <p>Code Created</p>
+        </div>
+
+        <!-- Social Media Buttons -->
+        <div class="social-buttons d-flex flex-wrap justify-content-center">
+          <a href="https://github.com/mahmoudibrahem275" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://www.instagram.com/eng_mahmoud_ibrahim_/?utm_source=qr&r=nametag" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com/share/1RE8XuzRWg/" target="_blank"><i class="fab fa-facebook"></i></a>
+          <a href="https://twitter.com/YOUR_TWITTER" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://wa.me/201120283294" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Side: Image + Social -->
+    <div class="hero-image d-flex flex-column align-items-center" style="flex:1;">
+      <!-- Profile Image with Dashed Animated Border -->
+      <div class="profile-container mb-3">
+        <img src="img/Mahmoud  (1).jpg" alt="Profile"
+     class="hero-img rounded-circle shadow-lg img-fluid">
+      </div>
+
+
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <h2>About Me</h2>
+    <p class="text-center fs-5">
+      Hello! I’m Mahmoud Ibrahim, a high school student passionate about web development and programming.
+      I love creating projects, exploring new technologies, and sharing knowledge with friends.
+    </p>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education" class="section bg-dark">
+    <h2>Education</h2>
+    <div class="container">
+      <div class="row justify-content-center g-3">
+        <div class="col-sm-12 col-md-6">
+          <div class="card card-custom p-3">
+            <h5>WE School, Assiut</h5>
+            <p>High School – Technology Section</p>
+            <p>Graduation: 2026</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="section">
+    <h2>Experience</h2>
+    <div class="container">
+      <div class="row justify-content-center g-3">
+        <div class="col-sm-12 col-md-6">
+          <div class="card card-custom p-3">
+            <h5>Web Development Projects</h5>
+            <p>Developed personal projects and school assignments using HTML, CSS, JS, and Bootstrap.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="section bg-dark">
+    <h2>Skills</h2>
+    <div class="container text-center">
+      <div class="row g-2 justify-content-center">
+        <div class="col-6 col-md-2">
+          <div class="card card-custom p-2">HTML</div>
+        </div>
+        <div class="col-6 col-md-2">
+          <div class="card card-custom p-2">CSS</div>
+        </div>
+        <div class="col-6 col-md-2">
+          <div class="card card-custom p-2">JavaScript</div>
+        </div>
+        <div class="col-6 col-md-2">
+          <div class="card card-custom p-2">Bootstrap</div>
+        </div>
+        <div class="col-6 col-md-2">
+          <div class="card card-custom p-2">Git & GitHub</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="section">
+    <h2>Projects</h2>
+    <div class="container">
+      <div class="row g-3 justify-content-center">
+        <!-- Personal Website -->
+        <div class="col-sm-12 col-md-4">
+          <div class="card card-custom p-3">
+            <h5>Personal Website</h5>
+            <p>Portfolio website built with HTML, CSS, JS, Bootstrap.</p>
+            <a href="https://github.com/YOUR_GITHUB" class="btn btn-custom mt-2"><i class="fab fa-github"></i>
+              GitHub</a>
+          </div>
+        </div>
+        <!-- School Project  -->
+        <div class="col-sm-12 col-md-4">
+          <div class="card card-custom p-3">
+            <h5>School Project</h5>
+            <p>School project using web development skills.</p>
+            <a href="https://github.com/YOUR_GITHUB" class="btn btn-custom mt-2"><i class="fab fa-github"></i>
+              GitHub</a>
+          </div>
+        </div>
+        <!-- AI Personality Analyzer -->
+        <div class="col-sm-12 col-md-4">
+          <div class="card card-custom p-3">
+            <h5>AI Personality Analyzer Website</h5>
+            <p>Portfolio website built with HTML, CSS, JS.</p>
+            <a href="https://github.com/YOUR_GITHUB" class="btn btn-custom mt-2"><i class="fab fa-github"></i>
+              GitHub</a>
+          </div>
+        </div>
+        <!-- Food Lover Website -->
+        <div class="col-sm-12 col-md-4">
+          <div class="card card-custom p-3">
+            <h5>Food Lover Website</h5>
+            <p>Portfolio website built with HTML, CSS, JS, Bootstrap.</p>
+            <a href="https://github.com/YOUR_GITHUB" class="btn btn-custom mt-2"><i class="fab fa-github"></i>
+              GitHub</a>
+          </div>
+        </div>
+        <!-- CLEVER CRAFTSMAN -->
+        <div class="col-sm-12 col-md-4">
+          <div class="card card-custom p-3">
+            <h5>CLEVER CRAFTSMAN Website</h5>
+            <p>Portfolio website built with HTML, CSS, JS, Bootstrap.</p>
+            <a href="https://github.com/YOUR_GITHUB" class="btn btn-custom mt-2"><i class="fab fa-github"></i>
+              GitHub</a>
+          </div>
+        </div>
+        <!-- financing  -->
+        <div class="col-sm-12 col-md-4">
+          <div class="card card-custom p-3">
+            <h5>Financing Website</h5>
+            <p>Portfolio website built with HTML, CSS, JS, Bootstrap.</p>
+            <a href="https://github.com/YOUR_GITHUB" class="btn btn-custom mt-2"><i class="fab fa-github"></i>
+              GitHub</a>
+          </div>
+        </div>
+        <!-- Hugo Bootstrap Theme -->
+        <div class="col-sm-12 col-md-4">
+          <div class="card card-custom p-3">
+            <h5>Hugo Bootstrap Theme Website</h5>
+            <p>Portfolio website built with HTML, CSS, JS, Bootstrap.</p>
+            <a href="https://github.com/YOUR_GITHUB" class="btn btn-custom mt-2"><i class="fab fa-github"></i>
+              GitHub</a>
+          </div>
+        </div>
+        <!-- Klinik -->
+        <div class="col-sm-12 col-md-4">
+          <div class="card card-custom p-3">
+            <h5>Klinik Website</h5>
+            <p>Portfolio website built with HTML, CSS, JS, Bootstrap.</p>
+            <a href="https://github.com/YOUR_GITHUB" class="btn btn-custom mt-2"><i class="fab fa-github"></i>
+              GitHub</a>
+          </div>
+        </div>
+        <!-- Pyramid Fashion -->
+        <div class="col-sm-12 col-md-4">
+          <div class="card card-custom p-3">
+            <h5>Pyramid Fashion Website</h5>
+            <p>Portfolio website built with HTML, CSS</p>
+            <a href="https://github.com/YOUR_GITHUB" class="btn btn-custom mt-2"><i class="fab fa-github"></i>
+              GitHub</a>
+          </div>
+        </div>
+        <!-- STRICT -->
+        <div class="col-sm-12 col-md-4">
+          <div class="card card-custom p-3">
+            <h5>STRICT Website</h5>
+            <p>Portfolio website built with HTML, CSS, JS, Bootstrap.</p>
+            <a href="https://github.com/YOUR_GITHUB" class="btn btn-custom mt-2"><i class="fab fa-github"></i>
+              GitHub</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
+    <!-- Memories -->
+    <section id="Memories" class="mt-3 shadow-lg img-thumbnail">
+        <video width="100%" poster="" muted controls>
+            <source src="محمود.mp4" type="video/mp4" class="img-fluid rounded-circle shadow-lg img-thumbnail">Your
+            browser does not support the video tag.
+        </video>
+    </section>
+  <br>
+  <!-- CV Section -->
+  <div class="cv-container" id="cv">
+    <!-- HEADER -->
+    <div class="header">
+      <img src="Mahmoud  (1).jpg" alt="Profile Photo">
+      <div class="info">
+        <h1 class="text-secondary">Eng Mahmoud Ibrahim</h1>
+        <p>High School Student – Technology Section</p>
+        <p><i class="fa fa-school"></i> WE School, Assiut</p>
+        <p><i class="fa fa-envelope"></i> Eng Mahmoud Ibrahim @gmail.com</p>
+        <p><i class="fa fa-phone"></i> +20 1120283294</p>
+      </div>
+    </div>
+
+    <div class="main-content">
+
+      <!-- LEFT PANEL -->
+      <div class="left-panel">
+        <div class="section-title">Skills</div>
+        <ul>
+          <li><i class="fa fa-check-circle"></i> Web Development Basics (HTML, CSS, JS)</li>
+          <li><i class="fa fa-check-circle"></i> Problem Solving & Logical Thinking</li>
+          <li><i class="fa fa-check-circle"></i> Microsoft Office (Word, Excel, PowerPoint)</li>
+          <li><i class="fa fa-check-circle"></i> Time Management</li>
+          <li><i class="fa fa-check-circle"></i> Teamwork & Collaboration</li>
+        </ul>
+
+        <div class="section-title">Languages</div>
+        <ul>
+          <li><i class="fa fa-language"></i> Arabic – Native</li>
+          <li><i class="fa fa-language"></i> English – Very Good</li>
+        </ul>
+      </div>
+
+      <!-- RIGHT PANEL -->
+      <div class="right-panel">
+        <div class="section-title">Profile</div>
+        <p>High school student in the technology section with a passion for programming, web development, and
+          technology. Eager to develop skills and participate in projects that enhance learning and creativity.</p>
+
+        <div class="section-title">Education</div>
+        <p>High School – Technology Section<br><span class="small-text">WE School, Assiut</span></p>
+
+        <div class="section-title">Experience</div>
+        <ul>
+          <li>Participated in school projects related to technology and programming</li>
+          <li>Developed simple web pages and applications as practice</li>
+          <li>Collaborated with classmates on team projects</li>
+          <li>Attended workshops and tech events</li>
+        </ul>
+
+        <div class="section-title">Achievements & Activities</div>
+        <ul>
+          <li>Member of the school tech club</li>
+          <li>Participated in coding competitions</li>
+          <li>Developed personal mini-projects for learning</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2 class="text-center mb-4">Contact Me</h2>
+
+      <form id="contactForm" class="col-md-6 mx-auto">
+
+        <!-- Name -->
+        <input id="name" class="form-control mb-2" placeholder="Your Name">
+        <div id="nameError" class="error">Please enter your name</div>
+
+        <!-- Email -->
+        <input id="email" type="email" class="form-control mb-2" placeholder="Your Email">
+        <div id="emailError" class="error">Please enter your email</div>
+
+        <!-- Message -->
+        <textarea id="message" class="form-control mb-2" placeholder="Your Message"></textarea>
+        <div id="messageError" class="error">Please enter your message</div>
+
+        <button class="btn w-100 mt-3">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Mahmoud Ibrahim | All Rights Reserved</p>
+  </footer>
+  <script>
+    const form = document.getElementById("contactForm");
+    const inputs = ["name", "email", "message"];
+
+    // Hide error while typing
+    inputs.forEach(id => {
+      document.getElementById(id).addEventListener("input", () => {
+        document.getElementById(id + "Error").style.display = "none";
+      });
+    });
+
+    // Form submit validation
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      let valid = true;
+      inputs.forEach(id => {
+        const input = document.getElementById(id);
+        const error = document.getElementById(id + "Error");
+        if (input.value.trim() === "") {
+          error.style.display = "block";
+          valid = false;
+        }
+      });
+      if (valid) {
+        alert("Message sent successfully ✔️");
+        form.reset();
+      }
+    });
+  </script>
+  <!-- Bootstrap JS -->
+  <script src="bootstrap.bundle.min.js"></script>
+  <!-- Counter Script -->
+  <script>
+    const counters = document.querySelectorAll('.counter');
+    counters.forEach(counter => {
+      const updateCount = () => {
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.innerText;
+        const increment = target / 200;
+        if (count < target) {
+          counter.innerText = Math.ceil(count + increment);
+          setTimeout(updateCount, 20);
+        } else {
+          counter.innerText = target;
+        }
+      };
+      updateCount();
+    });
+  </script>
+  <!-- 🔊 AUDIO -->
+  <audio id="bgMusic" loop>
+    <source src="audio/Trimmed_يحيى علاء _ياريت اصغر_ بالكلمات Lyrics اغنية مؤثرة جدا(M4A_128K).mp3" type="audio/mpeg">
+  </audio>
+  <script>
+    const music = document.getElementById("bgMusic");
+    music.volume = 0.4;
+
+    // أول تفاعل = تشغيل
+    document.addEventListener("click", () => {
+      music.play();
+    }, { once: true });
+
+    document.addEventListener("touchstart", () => {
+      music.play();
+    }, { once: true });
+  </script>
+
+
+</body>
+
+</html>
