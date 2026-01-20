@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title> Omar Mohamed | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="عمر محمد.jpg" type="image/x-icon">
+  <meta name="description" content="Free Web tutorials Welcome To WE School Class 2/4">
+  <meta name="outhor" content="Engineer Mahmoud ibrahem">
+  <meta name="keywords" content="Html,css,JS,Coding Html and css">
+  <link href="bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: #000;
+      color: #0f0;
+      font-family: monospace;
+      text-align: center
+    }
+
+
+    .btn-main {
+      background: #0f0;
+      color: #000;
+      border: none;
+      padding: 12px 30px;
+      border-radius: 25px;
+      transition: .3s
+    }
+
+    .btn-main:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #0f0;
+    }
+
+    .section {
+      padding: 100px 0;
+    }
+
+    .title {
+      text-align: center;
+      font-weight: 700;
+      margin-bottom: 60px;
+    }
+
+    .cardx {
+      background: #000011;
+      color: #0f0;
+      border-radius: 20px;
+      padding: 25px;
+      transition: .3s;
+    }
+
+    .cardx:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 20px #0f0;
+    }
+
+    /* Contact Form */
+    .error {
+      color: #ff4d4d;
+      font-size: 13px;
+      display: none;
+      margin-top: -8px;
+      margin-bottom: 10px;
+    }
+
+    #contactForm .btn {
+      background: #0f0;
+      border: none;
+      color: #fff;
+      font-weight: 600;
+      transition: all 0.3s;
+    }
+
+    #contactForm .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 20px #0ff;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+    <div class="container">
+      <a class="navbar-brand fs-4 fw-semibold active" href="#">Omar Mohamed</a>
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav ms-auto text-center">
+          <li class="nav-item"><a class="nav-link fs-4 fw-semibold active" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link fs-4 fw-semibold" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link fs-4 fw-semibold" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link fs-4 fw-semibold" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero" style="padding-top:100px;">
+    <div>
+      <img src="عمر محمد.jpg" class="img-fluid rounded-circle shadow-lg" style="width: 400px; height: 400px;">
+    </div>
+    <h1>Omar <span>Mohamed</span></h1>
+    <p class="lead">Cyber Frontend Developer<br>Neon & Animated</p>
+    <a href="#contact" class="btn btn-main mt-3">Hire Me</a>
+  </section>
+
+  <section id="about" class="section">
+    <h2 class="title">About Me</h2>
+    <p>I build modern cyber style websites with neon glow and interactive animations.</p>
+  </section>
+
+  <section id="skills" class="section">
+    <h2 class="title">Skills</h2>
+    <div class="cardx mb-3">HTML & CSS 95%</div>
+    <div class="cardx mb-3">Bootstrap 90%</div>
+    <div class="cardx mb-3">JavaScript 85%</div>
+  </section>
+
+  <section id="projects" class="section">
+    <h2 class="title">Projects</h2>
+    <div class="row g-4 justify-content-center">
+      <div class="col-md-4">
+        <div class="cardx">Portfolio</div>
+      </div>
+      <div class="col-md-4">
+        <div class="cardx">Landing Page</div>
+      </div>
+      <div class="col-md-4">
+        <div class="cardx">Business Site</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2 class="text-center mb-4">Contact Me</h2>
+
+      <form id="contactForm" class="col-md-6 mx-auto">
+
+        <!-- Name -->
+        <input id="name" class="form-control mb-2" placeholder="Your Name">
+        <div id="nameError" class="error">Please enter your name</div>
+
+        <!-- Email -->
+        <input id="email" type="email" class="form-control mb-2" placeholder="Your Email">
+        <div id="emailError" class="error">Please enter your email</div>
+
+        <!-- Message -->
+        <textarea id="message" class="form-control mb-2" placeholder="Your Message"></textarea>
+        <div id="messageError" class="error">Please enter your message</div>
+
+        <button class="btn w-100 mt-3">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="text-center py-4">&copy; 2025 Omar Mohamed</footer>
+  <script>
+    const form = document.getElementById("contactForm");
+    const inputs = ["name", "email", "message"];
+
+    // Hide error while typing
+    inputs.forEach(id => {
+      document.getElementById(id).addEventListener("input", () => {
+        document.getElementById(id + "Error").style.display = "none";
+      });
+    });
+
+    // Form submit validation
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      let valid = true;
+      inputs.forEach(id => {
+        const input = document.getElementById(id);
+        const error = document.getElementById(id + "Error");
+        if (input.value.trim() === "") {
+          error.style.display = "block";
+          valid = false;
+        }
+      });
+      if (valid) {
+        alert("Message sent successfully ✔️");
+        form.reset();
+      }
+    });
+  </script>
+  <script src="bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

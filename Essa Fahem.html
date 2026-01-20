@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="img (6).png" type="image/x-icon">
+  <meta name="description" content="Free Web tutorials Welcome To  WE School Class 2/4">
+  <meta name="outhor" content="Engineer Mahmoud ibrhem">
+  <meta name="keywords" content="Html,css,JS,Coding Html and css">
+  <title>Essaa Fahem | Portfolio</title>
+
+  <!-- link Bootstrap -->
+  <link href="bootstrap.min.css" rel="stylesheet">
+
+  <!-- link Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!--  link Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(135deg, #89f7fe, #66a6ff, #fbc2eb, #a6c1ee);
+      background-size: 400% 400%;
+      animation: gradientBG 5s ease infinite;
+      padding: 25px;
+    }
+
+    @keyframes gradientBG {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    .cv-container {
+      max-width: 1000px;
+      margin: auto;
+      background: #fff;
+      border-radius: 25px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    }
+
+    .header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      background: linear-gradient(90deg, #36d1dc, #5b86e5);
+      color: #fff;
+      padding: 30px;
+      gap: 20px;
+      border-bottom-left-radius: 25px;
+      border-bottom-right-radius: 25px;
+    }
+
+    .header img {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      border: 4px solid #fff;
+      object-fit: cover;
+      transition: transform 0.3s;
+    }
+
+    .header img:hover {
+      transform: scale(1.05);
+    }
+
+    .header .info h1 {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+
+    .header .info p {
+      margin: 3px 0;
+    }
+
+    .main-content {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .left-panel {
+      flex: 1 1 35%;
+      background: #f0f0f0;
+      padding: 35px 25px;
+      min-width: 250px;
+    }
+
+    .right-panel {
+      flex: 1 1 65%;
+      padding: 35px 30px;
+      min-width: 300px;
+    }
+
+    .section-title {
+      font-weight: 700;
+      font-size: 18px;
+      margin-bottom: 12px;
+      color: #36d1dc;
+      border-left: 5px solid #36d1dc;
+      padding-left: 10px;
+      transition: color 0.3s, border-color 0.3s;
+    }
+
+    .section-title:hover {
+      color: #5b86e5;
+      border-color: #5b86e5;
+    }
+
+    .left-panel ul,
+    .right-panel ul {
+      padding-left: 20px;
+    }
+
+    .left-panel li,
+    .right-panel li {
+      margin-bottom: 10px;
+      font-size: 15px;
+      display: flex;
+      align-items: center;
+    }
+
+    .left-panel li i {
+      color: #ffbf00;
+      margin-right: 8px;
+    }
+
+    .small-text {
+      font-size: 14px;
+      color: #6b7280;
+    }
+
+    @media(max-width: 768px) {
+      .header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .main-content {
+        flex-direction: column;
+      }
+
+      .left-panel,
+      .right-panel {
+        flex: 1 1 100%;
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="cv-container">
+
+    <!-- HEADER -->
+    <div class="header">
+      <img src="img (6).png" alt="Profile Photo">
+      <div class="info">
+        <h1>Essaa Fahem</h1>
+        <p>ICT Teacher</p>
+        <p><i class="fa fa-envelope"></i> example@gmail.com</p>
+        <p><i class="fa fa-phone"></i> +20 10X XXX XXXX</p>
+      </div>
+    </div>
+
+    <div class="main-content">
+
+      <!-- LEFT PANEL -->
+      <div class="left-panel">
+        <div class="section-title">Skills</div>
+        <ul>
+          <li><i class="fa fa-check-circle"></i> Computer Fundamentals</li>
+          <li><i class="fa fa-check-circle"></i> Office Applications (Word, Excel, PowerPoint)</li>
+          <li><i class="fa fa-check-circle"></i> Internet & Networking</li>
+          <li><i class="fa fa-check-circle"></i> Coding Basics (HTML, CSS, JavaScript)</li>
+          <li><i class="fa fa-check-circle"></i> Lesson Planning & Student Assessment</li>
+        </ul>
+
+        <div class="section-title">Languages</div>
+        <ul>
+          <li><i class="fa fa-language"></i> Arabic – Native</li>
+          <li><i class="fa fa-language"></i> English – Excellent</li>
+        </ul>
+      </div>
+
+      <!-- RIGHT PANEL -->
+      <div class="right-panel">
+        <div class="section-title">Professional Profile</div>
+        <p>Experienced ICT Teacher skilled in teaching computer fundamentals, office applications, and basic coding.
+          Adept at guiding students in practical computer projects and developing problem-solving and digital literacy
+          skills.</p>
+
+        <div class="section-title">Education</div>
+        <p>Bachelor of Science in Computer Science / Information Technology<br><span class="small-text">Faculty of
+            Computers and Information</span></p>
+
+        <div class="section-title">Experience</div>
+        <ul>
+          <li>Teaching ICT and computer skills to high school and college students</li>
+          <li>Preparing interactive lessons and exercises</li>
+          <li>Guiding students in practical computer projects</li>
+          <li>Assessing students through projects, quizzes, and practical tests</li>
+          <li>Enhancing students’ digital literacy and problem-solving skills</li>
+        </ul>
+
+        <div class="section-title">Achievements & Activities</div>
+        <ul>
+          <li>Organized ICT workshops and coding competitions</li>
+          <li>Participated in professional development programs for teachers</li>
+          <li>Mentored students in building digital projects</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+  <script src="bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

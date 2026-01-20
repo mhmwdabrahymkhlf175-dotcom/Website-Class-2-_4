@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Mohamed Abdel Nasser | Premium Portfolio</title>
+  <link rel="shortcut icon" href="محمد عبد الناصر.jpg" type="image/x-icon">
+  <meta name="description" content="Free Web tutorials Welcome To WE School Class 2/4">
+  <meta name="outhor" content="Engineer Mahmoud ibrahem">
+  <meta name="keywords" content="Html,css,JS,Coding Html and css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap -->
+  <link href="bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    /* Body & Font */
+    body {
+      background: linear-gradient(145deg, #0b0c2a, #1a1b3c);
+      color: #fff;
+      font-family: 'Segoe UI', sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* Navbar */
+    .navbar {
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Hero Section */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+
+    .hero .glass {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(20px);
+      border-radius: 25px;
+      padding: 40px;
+      box-shadow: 0 0 40px rgba(0, 255, 255, 0.3);
+      border: 1px solid rgba(0, 255, 255, 0.2);
+      transition: transform 0.3s;
+    }
+
+    .hero .glass:hover {
+      transform: translateY(-5px);
+    }
+
+    .profile {
+      width: 250px;
+      border-radius: 50%;
+      border: 3px solid #0ff;
+      box-shadow: 0 0 25px #0ff;
+    }
+
+    /* Sections */
+    .section {
+      padding: 90px 0;
+    }
+
+    /* Skills */
+    .skill {
+      background: rgba(0, 255, 255, 0.1);
+      padding: 15px;
+      border-radius: 15px;
+      text-align: center;
+      margin-bottom: 15px;
+      font-weight: 500;
+      transition: all 0.3s;
+    }
+
+    .skill:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 15px #0ff;
+    }
+
+    /* Cards */
+    .card {
+      background: rgba(0, 255, 255, 0.05);
+      border: none;
+      border-radius: 20px;
+      padding: 25px;
+      margin-bottom: 20px;
+      transition: all 0.3s;
+      color: white;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 25px #0ff;
+    }
+
+    /* Contact Form */
+    .error {
+      color: #ff4d4d;
+      font-size: 13px;
+      display: none;
+      margin-top: -8px;
+      margin-bottom: 10px;
+    }
+
+    #contactForm .btn {
+      background: linear-gradient(90deg, #00f0ff, #ff00d0);
+      border: none;
+      color: #fff;
+      font-weight: 600;
+      transition: all 0.3s;
+    }
+
+    #contactForm .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 20px #0ff;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+    <div class="container">
+      <a class="navbar-brand fs-4 fw-semibold active" href="#">Mohamed Abdel Nasser</a>
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav ms-auto text-center">
+          <li class="nav-item"><a class="nav-link fs-4 fw-semibold active" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link fs-4 fw-semibold" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link fs-4 fw-semibold" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <div class="glass">
+            <h1 class="fw-bold">Mohamed Abdel Nasser</h1>
+            <p class="text-info">Front-End Developer</p>
+            <p>Crafting Premium Modern Web Experiences with Neon & Glass Design.</p>
+            
+            <a href="#contact" class="btn btn-outline-info">Contact Me</a>
+          </div>
+        </div>
+        <div class="col-md-6 text-center mt-4">
+          <img src="محمد عبد الناصر.jpg" class="profile">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="section" id="skills">
+    <div class="container">
+      <h2 class="text-center mb-5">Skills</h2>
+      <div class="row g-3">
+        <div class="col-6 col-md-3">
+          <div class="skill">HTML</div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="skill">CSS</div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="skill">JavaScript</div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="skill">Bootstrap</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="section" id="projects">
+    <div class="container">
+      <h2 class="text-center mb-5">Projects</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card">
+            <h5>Portfolio Website</h5>
+            <p>Premium Neon Glass UI</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <h5>Landing Page</h5>
+            <p>Interactive Neon Layout</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <h5>To-Do App</h5>
+            <p>Modern JS Project</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2 class="text-center mb-4">Contact Me</h2>
+
+      <form id="contactForm" class="col-md-6 mx-auto">
+
+        <!-- Name -->
+        <input id="name" class="form-control mb-2" placeholder="Your Name">
+        <div id="nameError" class="error">Please enter your name</div>
+
+        <!-- Email -->
+        <input id="email" type="email" class="form-control mb-2" placeholder="Your Email">
+        <div id="emailError" class="error">Please enter your email</div>
+
+        <!-- Message -->
+        <textarea id="message" class="form-control mb-2" placeholder="Your Message"></textarea>
+        <div id="messageError" class="error">Please enter your message</div>
+
+        <button class="btn w-100 mt-3">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="text-center py-4 text-muted">
+    &copy; 2026 Mohamed Abdel Nasser
+  </footer>
+
+  <script>
+    const form = document.getElementById("contactForm");
+    const inputs = ["name", "email", "message"];
+
+    // Hide error while typing
+    inputs.forEach(id => {
+      document.getElementById(id).addEventListener("input", () => {
+        document.getElementById(id + "Error").style.display = "none";
+      });
+    });
+
+    // Form submit validation
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      let valid = true;
+      inputs.forEach(id => {
+        const input = document.getElementById(id);
+        const error = document.getElementById(id + "Error");
+        if (input.value.trim() === "") {
+          error.style.display = "block";
+          valid = false;
+        }
+      });
+      if (valid) {
+        alert("Message sent successfully ✔️");
+        form.reset();
+      }
+    });
+  </script>
+  <script src="bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

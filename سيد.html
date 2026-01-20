@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sayyed Mohamed Sayyed | Portfolio</title>
+    <link rel="shortcut icon" href="سيد.jpg" type="image/x-icon">
+    <meta name="description" content="Free Web tutorials Welcome To WE School Class 2/4">
+    <meta name="outhor" content="Engineer Mahmoud ibrahem">
+    <meta name="keywords" content="Html,css,JS,Coding Html and css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --main: #ffd700;
+            --sec: #daa520;
+            --bg: #1a0d00;
+        }
+
+        body {
+            font-family: sans-serif;
+            background: var(--bg);
+            color: #fff;
+            text-align: center;
+        }
+
+        .navbar {
+            background: rgba(26, 13, 0, .9);
+        }
+
+        .hero {
+            min-height: 100vh;
+            padding-top: 100px;
+        }
+
+
+        .avatar-box img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+        }
+
+        @keyframes glow {
+            from {
+                box-shadow: 0 0 10px var(--main);
+            }
+
+            to {
+                box-shadow: 0 0 35px var(--sec);
+            }
+        }
+
+        .btn-main {
+            background: linear-gradient(45deg, var(--main), var(--sec));
+            border: none;
+            padding: 14px 36px;
+            border-radius: 30px;
+            color: #fff;
+            transition: .4s;
+        }
+
+        .btn-main:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 25px var(--sec);
+        }
+
+        .section {
+            padding: 100px 0;
+        }
+
+        .title {
+            text-align: center;
+            font-weight: 700;
+            margin-bottom: 60px;
+        }
+
+        .cardx {
+            background: #331a00;
+            border-radius: 20px;
+            padding: 25px;
+            transition: .4s;
+        }
+
+        .cardx:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 20px var(--main);
+        }
+
+        input,
+        textarea {
+            background: #1a0d00;
+            color: #ffd700;
+            border: 1px solid var(--main);
+            border-radius: 15px;
+        }
+
+        footer {
+            background: #111;
+            color: #ffd700;
+        }
+
+        /* Contact Form */
+        .error {
+            color: #ff4d4d;
+            font-size: 13px;
+            display: none;
+            margin-top: -8px;
+            margin-bottom: 10px;
+        }
+
+        #contactForm .btn {
+            background: linear-gradient(45deg, var(--main), var(--sec));
+            border: none;
+            color: #fff;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        #contactForm .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 20px #0ff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+        <div class="container">
+            <a class="navbar-brand fs-4 fw-semibold active" href="#home">Sayyed Mohamed Sayyed</a>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="nav">
+                <ul class="navbar-nav ms-auto text-center">
+                    <li class="nav-item"><a class="nav-link fs-4 fw-semibold active" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link fs-4 fw-semibold" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link fs-4 fw-semibold" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link fs-4 fw-semibold" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="avatar-box">
+            <img src="سيد.jpg">
+        </div>
+        <h1>Sayyed <span>Mohamed Sayyed</span></h1>
+        <p class="lead">Luxury Frontend Developer<br>Gold Luxury Theme</p>
+        <a href="#contact" class="btn btn-main mt-3">Hire Me</a>
+    </section>
+
+    <section id="about" class="section">
+        <h2 class="title">About Me</h2>
+        <p class="text-center col-md-8 mx-auto">I craft luxurious gold-themed websites with animated cards and smooth
+            user interactions.</p>
+    </section>
+
+    <section id="skills" class="section">
+        <h2 class="title">Skills</h2>
+        <div class="cardx mb-3">HTML & CSS 95%</div>
+        <div class="cardx mb-3">Bootstrap 90%</div>
+        <div class="cardx mb-3">JavaScript 85%</div>
+    </section>
+
+    <section id="projects" class="section">
+        <h2 class="title">Projects</h2>
+        <div class="row g-4 justify-content-center">
+            <div class="col-md-4">
+                <div class="cardx">Portfolio</div>
+            </div>
+            <div class="col-md-4">
+                <div class="cardx">Landing Page</div>
+            </div>
+            <div class="col-md-4">
+                <div class="cardx">Business Website</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="text-center mb-4">Contact Me</h2>
+
+            <form id="contactForm" class="col-md-6 mx-auto">
+
+                <!-- Name -->
+                <input id="name" class="form-control mb-2" placeholder="Your Name">
+                <div id="nameError" class="error">Please enter your name</div>
+
+                <!-- Email -->
+                <input id="email" type="email" class="form-control mb-2" placeholder="Your Email">
+                <div id="emailError" class="error">Please enter your email</div>
+
+                <!-- Message -->
+                <textarea id="message" class="form-control mb-2" placeholder="Your Message"></textarea>
+                <div id="messageError" class="error">Please enter your message</div>
+
+                <button class="btn w-100 mt-3">Send Message</button>
+            </form>
+        </div>
+    </section>
+    <script>
+        const form = document.getElementById("contactForm");
+        const inputs = ["name", "email", "message"];
+
+        // Hide error while typing
+        inputs.forEach(id => {
+            document.getElementById(id).addEventListener("input", () => {
+                document.getElementById(id + "Error").style.display = "none";
+            });
+        });
+
+        // Form submit validation
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+            let valid = true;
+            inputs.forEach(id => {
+                const input = document.getElementById(id);
+                const error = document.getElementById(id + "Error");
+                if (input.value.trim() === "") {
+                    error.style.display = "block";
+                    valid = false;
+                }
+            });
+            if (valid) {
+                alert("Message sent successfully ✔️");
+                form.reset();
+            }
+        });
+    </script>
+    <footer class="text-center py-4">&copy; 2025 Sayyed Mohamed Sayyed</footer>
+    <script src="bootstrap.min.css"></script>
+</body>
+
+</html>

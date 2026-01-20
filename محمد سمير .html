@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Mohamed Samir | Portfolio</title>
+  <link rel="shortcut icon" href="محمد سمير.jpg" type="image/x-icon">
+  <meta name="description" content="Free Web tutorials Welcome To WE School Class 2/4">
+  <meta name="outhor" content="Engineer Mahmoud ibrahem">
+  <meta name="keywords" content="Html,css,JS,Coding Html and css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap -->
+  <link href="bootstrap.min.css" rel="stylesheet">
+
+  <!-- Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f5f7fb;
+      color: #1e293b;
+    }
+
+    .navbar {
+      background: rgb(0, 0, 0, 0.5);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, .05);
+    }
+
+    .hero {
+      padding: 120px 0;
+    }
+
+    .hero h1 span {
+      color: #2563eb;
+    }
+
+    .profile {
+      width: 260px;
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, .15);
+    }
+
+    .section {
+      padding: 90px 0;
+    }
+
+    .card {
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
+      transition: .3s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+    }
+
+    .skill {
+      background: #fff;
+      padding: 15px;
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, .05);
+      text-align: center;
+      font-weight: 500;
+    }
+
+    .fade {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: .6s;
+    }
+
+    .fade.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Contact Form */
+    .error {
+      color: #ff4d4d;
+      font-size: 13px;
+      display: none;
+      margin-top: -8px;
+      margin-bottom: 10px;
+    }
+
+    #contactForm .btn {
+      background: linear-gradient(90deg, #00f0ff, #ff00d0);
+      border: none;
+      color: #fff;
+      font-weight: 600;
+      transition: all 0.3s;
+    }
+
+    #contactForm .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 20px #0ff;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+    <div class="container">
+      <a class="navbar-brand fs-4 fw-semibold active" href="#">Mohamed Samir</a>
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav ms-auto text-center">
+          <li class="nav-item"><a class="nav-link fs-4 fw-semibold active" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link fs-4 fw-semibold" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link fs-4 fw-semibold" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero section">
+    <div class="container">
+      <div class="row align-items-center fade">
+        <div class="col-md-6">
+          <h1 class="fw-bold">Hi, I'm <span>Mohamed Samir</span></h1>
+          <h5 class="text-muted mb-3">Front-End Developer</h5>
+          <p>
+            I design and build modern websites with clean UI
+            and great user experience.
+          </p>
+          <a href="cv.pdf" download class="btn btn-primary me-2">Download CV</a>
+          <a href="#projects" class="btn btn-outline-primary">Projects</a>
+        </div>
+        <div class="col-md-6 text-center mt-4">
+          <img src="محمد سمير.jpg" class="profile">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="section bg-white" id="skills">
+    <div class="container fade">
+      <h2 class="text-center mb-5">Skills</h2>
+      <div class="row g-3">
+        <div class="col-6 col-md-3">
+          <div class="skill">HTML</div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="skill">CSS</div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="skill">JavaScript</div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="skill">Bootstrap</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="section">
+    <div class="container fade">
+      <h2 class="text-center mb-5">Projects</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card p-4">
+            <h5>Portfolio Website</h5>
+            <p>Clean & responsive design</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card p-4">
+            <h5>Landing Page</h5>
+            <p>Business website layout</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card p-4">
+            <h5>To-Do App</h5>
+            <p>JavaScript project</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2 class="text-center mb-4">Contact Me</h2>
+
+      <form id="contactForm" class="col-md-6 mx-auto">
+
+        <!-- Name -->
+        <input id="name" class="form-control mb-2" placeholder="Your Name">
+        <div id="nameError" class="error">Please enter your name</div>
+
+        <!-- Email -->
+        <input id="email" type="email" class="form-control mb-2" placeholder="Your Email">
+        <div id="emailError" class="error">Please enter your email</div>
+
+        <!-- Message -->
+        <textarea id="message" class="form-control mb-2" placeholder="Your Message"></textarea>
+        <div id="messageError" class="error">Please enter your message</div>
+
+        <button class="btn w-100 mt-3">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="text-center py-4 text-muted">
+    &copy; 2026 Mohamed Samir
+  </footer>
+  <script>
+    const form = document.getElementById("contactForm");
+    const inputs = ["name", "email", "message"];
+
+    // Hide error while typing
+    inputs.forEach(id => {
+      document.getElementById(id).addEventListener("input", () => {
+        document.getElementById(id + "Error").style.display = "none";
+      });
+    });
+
+    // Form submit validation
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      let valid = true;
+      inputs.forEach(id => {
+        const input = document.getElementById(id);
+        const error = document.getElementById(id + "Error");
+        if (input.value.trim() === "") {
+          error.style.display = "block";
+          valid = false;
+        }
+      });
+      if (valid) {
+        alert("Message sent successfully ✔️");
+        form.reset();
+      }
+    });
+  </script>
+  <script>
+    const fades = document.querySelectorAll(".fade");
+    window.addEventListener("scroll", () => {
+      fades.forEach(el => {
+        if (el.getBoundingClientRect().top < window.innerHeight - 100) {
+          el.classList.add("show");
+        }
+      });
+    });
+  </script>
+  <script src="bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Omar Saad | Professional Portfolio</title>
+  <link rel="shortcut icon" href="عمر سعد.jpg" type="image/x-icon">
+  <meta name="description" content="Free Web tutorials Welcome To WE School Class 2/4">
+  <meta name="outhor" content="Engineer Mahmoud ibrahem">
+  <meta name="keywords" content="Html,css,JS,Coding Html and css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap -->
+  <link href="bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <style>
+    * {
+      scroll-behavior: smooth
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #0f172a;
+      color: #fff;
+    }
+
+    /* NAVBAR */
+    .navbar {
+      backdrop-filter: blur(10px);
+      background: rgba(15, 23, 42, .85);
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      background: radial-gradient(circle at top, #6366f1, #0f172a 70%);
+    }
+
+    .hero img {
+      width: 230px;
+      border-radius: 50%;
+      border: 6px solid #6366f1;
+      box-shadow: 0 0 40px #6366f1;
+      animation: float 4s ease-in-out infinite;
+    }
+
+    @keyframes float {
+
+      0%,
+      100% {
+        transform: translateY(0)
+      }
+
+      50% {
+        transform: translateY(-15px)
+      }
+    }
+
+    /* BUTTON */
+    .btn-main {
+      background: linear-gradient(45deg, #6366f1, #22d3ee);
+      border: none;
+      color: #fff;
+      padding: 12px 30px;
+      border-radius: 30px;
+      transition: .3s;
+    }
+
+    .btn-main:hover {
+      transform: scale(1.1);
+      box-shadow: 0 10px 40px #22d3ee;
+    }
+
+    /* SECTIONS */
+    .section {
+      padding: 100px 0;
+    }
+
+    .title {
+      font-weight: 700;
+      margin-bottom: 60px;
+      position: relative;
+    }
+
+    .title::after {
+      content: '';
+      width: 80px;
+      height: 4px;
+      background: #22d3ee;
+      position: absolute;
+      left: 50%;
+      bottom: -15px;
+      transform: translateX(-50%);
+    }
+
+    /* CARDS */
+    .card-custom {
+      background: #111827;
+      border-radius: 20px;
+      padding: 30px;
+      transition: .4s;
+      height: 100%;
+    }
+
+    .card-custom:hover {
+      transform: translateY(-15px);
+      box-shadow: 0 20px 60px rgba(34, 211, 238, .3);
+    }
+
+    /* SKILL BAR */
+    .progress {
+      height: 10px;
+      border-radius: 20px;
+    }
+
+    .progress-bar {
+      background: linear-gradient(90deg, #6366f1, #22d3ee);
+    }
+
+    /* FOOTER */
+    footer {
+      background: #020617;
+      color: #94a3b8;
+    }
+
+        /* Contact Form */
+    .error {
+      color: #ff4d4d;
+      font-size: 13px;
+      display: none;
+      margin-top: -8px;
+      margin-bottom: 10px;
+    }
+
+    #contactForm .btn {
+      background: linear-gradient(90deg, #6366f1, #22d3ee);
+      border: none;
+      color: #fff;
+      font-weight: 600;
+      transition: all 0.3s;
+    }
+
+    #contactForm .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 20px #0ff;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">Omar Saad</a>
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link fs-4 fw-semibold active" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link fs-4 fw-semibold" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link fs-4 fw-semibold" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link fs-4 fw-semibold" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero d-flex align-items-center text-center">
+    <div class="container" data-aos="fade-up">
+      <img src="عمر سعد.jpg">
+      <h1 class="mt-4 fw-bold">Omar Saad</h1>
+      <p class="lead">Creative Web Developer</p>
+      <a href="#contact" class="btn btn-main mt-3">Hire Me</a>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="container text-center">
+      <h2 class="title">About Me</h2>
+      <p class="col-md-8 mx-auto text-secondary" data-aos="fade-up">
+        I am Omar Saad, a professional web developer passionate about building
+        beautiful, fast, and interactive websites with modern technologies.
+      </p>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section bg-dark">
+    <div class="container">
+      <h2 class="title text-center">Skills</h2>
+
+      <div class="mb-4" data-aos="fade-right">
+        <label>HTML & CSS</label>
+        <div class="progress">
+          <div class="progress-bar" style="width:95%"></div>
+        </div>
+      </div>
+
+      <div class="mb-4" data-aos="fade-right">
+        <label>Bootstrap</label>
+        <div class="progress">
+          <div class="progress-bar" style="width:90%"></div>
+        </div>
+      </div>
+
+      <div class="mb-4" data-aos="fade-right">
+        <label>JavaScript</label>
+        <div class="progress">
+          <div class="progress-bar" style="width:85%"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2 class="title text-center">Projects</h2>
+      <div class="row g-4">
+
+        <div class="col-md-4" data-aos="zoom-in">
+          <div class="card-custom">
+            <h5>Landing Page</h5>
+            <p class="text-secondary">Modern responsive landing page</p>
+          </div>
+        </div>
+
+        <div class="col-md-4" data-aos="zoom-in">
+          <div class="card-custom">
+            <h5>Portfolio Website</h5>
+            <p class="text-secondary">Personal brand website</p>
+          </div>
+        </div>
+
+        <div class="col-md-4" data-aos="zoom-in">
+          <div class="card-custom">
+            <h5>Business Site</h5>
+            <p class="text-secondary">Professional company website</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2 class="text-center mb-4">Contact Me</h2>
+
+      <form id="contactForm" class="col-md-6 mx-auto">
+
+        <!-- Name -->
+        <input id="name" class="form-control mb-2" placeholder="Your Name">
+        <div id="nameError" class="error">Please enter your name</div>
+
+        <!-- Email -->
+        <input id="email" type="email" class="form-control mb-2" placeholder="Your Email">
+        <div id="emailError" class="error">Please enter your email</div>
+
+        <!-- Message -->
+        <textarea id="message" class="form-control mb-2" placeholder="Your Message"></textarea>
+        <div id="messageError" class="error">Please enter your message</div>
+
+        <button class="btn w-100 mt-3">Send Message</button>
+      </form>
+    </div>
+  </section>
+  <footer class="text-center py-4">
+    &copy; 2025 Omar Saad | Designed with
+  </footer>
+
+  <!-- JS -->
+  <script src="bootstrap.bundle.min.js"></script>
+  <script>
+    const form = document.getElementById("contactForm");
+    const inputs = ["name", "email", "message"];
+
+    // Hide error while typing
+    inputs.forEach(id => {
+      document.getElementById(id).addEventListener("input", () => {
+        document.getElementById(id + "Error").style.display = "none";
+      });
+    });
+
+    // Form submit validation
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      let valid = true;
+      inputs.forEach(id => {
+        const input = document.getElementById(id);
+        const error = document.getElementById(id + "Error");
+        if (input.value.trim() === "") {
+          error.style.display = "block";
+          valid = false;
+        }
+      });
+      if (valid) {
+        alert("Message sent successfully ✔️");
+        form.reset();
+      }
+    });
+  </script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1200,
+      once: true
+    });
+  </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Youssef Ahmed | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="يوسف احمد.jpg" type="image/x-icon">
+  <meta name="description" content="Free Web tutorials Welcome To WE School Class 2/4">
+  <meta name="outhor" content="Engineer Mahmoud ibrahem">
+  <meta name="keywords" content="Html,css,JS,Coding Html and css">
+  <link href="bootstrap.min.css" rel="stylesheet">
+  <style>
+    :root {
+      --main: #1e90ff;
+      --sec: #00bfff;
+      --bg: #f0f8ff;
+    }
+
+    body {
+      font-family: sans-serif;
+      background: var(--bg);
+      color: #000;
+    }
+
+    .hero {
+      text-align: center;
+      padding-top: 100px;
+    }
+
+
+    .btn-main {
+      background: var(--main);
+      border: none;
+      padding: 12px 30px;
+      border-radius: 25px;
+      color: #fff;
+      transition: .3s;
+    }
+
+    .btn-main:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px var(--main);
+    }
+
+    .section {
+      padding: 100px 0;
+    }
+
+    .title {
+      text-align: center;
+      font-weight: 700;
+      margin-bottom: 60px;
+    }
+
+    .cardx {
+      background: #e0f0ff;
+      border-radius: 15px;
+      padding: 25px;
+      transition: .3s;
+    }
+
+    .cardx:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 15px var(--main);
+    }
+
+    input,
+    textarea {
+      background: #fff;
+      color: #000;
+      border: 1px solid var(--sec);
+      border-radius: 15px;
+    }
+
+    footer {
+      background: #e0f0ff;
+      color: #333;
+    }
+
+    /* Contact Form */
+    .error {
+      color: #ff4d4d;
+      font-size: 13px;
+      display: none;
+      margin-top: -8px;
+      margin-bottom: 10px;
+    }
+
+    #contactForm .btn {
+      background: linear-gradient(90deg, #00f0ff, #ff00d0);
+      border: none;
+      color: #fff;
+      font-weight: 600;
+      transition: all 0.3s;
+    }
+
+    #contactForm .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 20px #0ff;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand fs-4 fw-semibold active" href="#">Youssef Ahmed</a>
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav ms-auto text-center">
+          <li class="nav-item"><a class="nav-link fs-4 fw-semibold active" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link fs-4 fw-semibold" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link fs-4 fw-semibold" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link fs-4 fw-semibold" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div>
+      <img src="يوسف احمد.jpg" class="img-fluid rounded-circle shadow-lg" style="width: 400px; height: 400px;">
+    </div>
+    <h1>Youssef <span>Ahmed</span></h1>
+    <p class="lead">Minimal Frontend Developer<br>Clean & Blue Theme</p>
+    <a href="#contact" class="btn btn-main mt-3">Hire Me</a>
+  </section>
+
+  <section id="about" class="section">
+    <h2 class="title">About Me</h2>
+    <p class="text-center col-md-8 mx-auto">I develop clean and minimalistic websites with calm blue tones and smooth
+      UX.</p>
+  </section>
+
+  <section id="skills" class="section">
+    <h2 class="title">Skills</h2>
+    <label>HTML & CSS</label>
+    <div class="progress mb-4">
+      <div class="progress-bar" style="width:95%"></div>
+    </div>
+    <label>Bootstrap</label>
+    <div class="progress mb-4">
+      <div class="progress-bar" style="width:90%"></div>
+    </div>
+    <label>JavaScript</label>
+    <div class="progress mb-4">
+      <div class="progress-bar" style="width:85%"></div>
+    </div>
+  </section>
+
+  <section id="projects" class="section">
+    <h2 class="title">Projects</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="cardx text-center">Portfolio</div>
+      </div>
+      <div class="col-md-4">
+        <div class="cardx text-center">Landing Page</div>
+      </div>
+      <div class="col-md-4">
+        <div class="cardx text-center">Business Site</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2 class="text-center mb-4">Contact Me</h2>
+
+      <form id="contactForm" class="col-md-6 mx-auto">
+
+        <!-- Name -->
+        <input id="name" class="form-control mb-2" placeholder="Your Name">
+        <div id="nameError" class="error">Please enter your name</div>
+
+        <!-- Email -->
+        <input id="email" type="email" class="form-control mb-2" placeholder="Your Email">
+        <div id="emailError" class="error">Please enter your email</div>
+
+        <!-- Message -->
+        <textarea id="message" class="form-control mb-2" placeholder="Your Message"></textarea>
+        <div id="messageError" class="error">Please enter your message</div>
+
+        <button class="btn w-100 mt-3">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="text-center py-4">&copy; 2025 Youssef Ahmed</footer>
+  <script>
+    const form = document.getElementById("contactForm");
+    const inputs = ["name", "email", "message"];
+
+    // Hide error while typing
+    inputs.forEach(id => {
+      document.getElementById(id).addEventListener("input", () => {
+        document.getElementById(id + "Error").style.display = "none";
+      });
+    });
+
+    // Form submit validation
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      let valid = true;
+      inputs.forEach(id => {
+        const input = document.getElementById(id);
+        const error = document.getElementById(id + "Error");
+        if (input.value.trim() === "") {
+          error.style.display = "block";
+          valid = false;
+        }
+      });
+      if (valid) {
+        alert("Message sent successfully ✔️");
+        form.reset();
+      }
+    });
+  </script>
+  <script src="bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" href="CV Eng/img/النسر.jpg" type="image/x-icon">
+  <meta name="description" content="Free Web tutorials Eng Evaluation Of The Website">
+  <meta name="outhor" content="Engineer Mahmoud ibrhem">
+  <meta name="keywords" content="Html,css,JS,Coding Html and css">
+  <title>Eng Evaluation Of The Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* تأثير السحب/المسح عند الحذف */
+    .dynamic-review .card {
+      cursor: pointer;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .dynamic-review.deleting .card {
+      transform: translateX(100%) rotate(10deg);
+      opacity: 0;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(135deg, #a1c4fd, #fcd2ff, #89f7fe, #66a6ff, #fbc2eb, #a6c1ee, #fad0c4, #ff9a9e, #fbc2eb, #a6c1ee, #f6d365, #ff9a9e, #fecfef, #a1c4fd, #c2e9fb, #f6d365, #fda085, #c2e9fb);
+      background-size: 400% 400%;
+      animation: gradientBG 5s ease infinite;
+    }
+
+    @keyframes gradientBG {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-dark">
+
+  <div class="container my-5">
+    <h2 class="text-center mb-4 text-light">⭐ Eng Evaluation Of The Website</h2>
+
+    <!-- Review Form -->
+    <div class="row justify-content-center mb-4">
+      <div class="col-md-6">
+        <div class="card shadow">
+          <div class="card-body">
+            <h5 class="card-title text-center mb-3">Add Your Review</h5>
+
+            <form id="reviewForm">
+              <div class="mb-3">
+                <label class="form-label">Your Name</label>
+                <input type="text" class="form-control" id="reviewName" placeholder="Enter your name" required>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Your Review</label>
+                <textarea class="form-control" id="reviewMessage" rows="3" placeholder="Write your review here"
+                  required></textarea>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Rating</label>
+                <select class="form-select" id="reviewRating" required>
+                  <option value="">Select rating</option>
+                  <option value="5">★★★★★</option>
+                  <option value="4">★★★★☆</option>
+                  <option value="3">★★★☆☆</option>
+                  <option value="2">★★☆☆☆</option>
+                  <option value="1">★☆☆☆☆</option>
+                </select>
+              </div>
+              <button type="submit" class="btn btn-outline-primary w-100">Submit Review</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Reviews Display -->
+
+    <div class="row" id="reviewsContainer">
+      <div class="col-md-4 mb-3">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body text-center">
+            <h5 class="card-title">Miss Reem Ebrahim</h5>
+            <p class="text-warning mb-2">★★★★★</p>
+            <p class="card-text">
+              "Thanks for your amazing work on the website!"
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body text-center">
+            <h5 class="card-title">Eng Anher Salah</h5>
+            <p class="text-warning mb-2">★★★★☆</p>
+            <p class="card-text">
+              "You're the best web designer I've ever worked with!"
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body text-center">
+            <h5 class="card-title">Eng Marian Rashed</h5>
+            <p class="text-warning mb-2">★★★☆☆</p>
+            <p class="card-text">
+              "Your creativity and dedication are truly appreciated!"
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body text-center">
+            <h5 class="card-title"> Eng Nermeen </h5>
+            <p class="text-warning mb-2">★★★★★</p>
+            <p class="card-text">
+              "Great job on bringing the website to life!"
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body text-center">
+            <h5 class="card-title">Miss Dalia Mahmoud</h5>
+            <p class="text-warning mb-2">★★★★☆</p>
+            <p class="card-text">
+              "Thank you for your hard work and commitment!"
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body text-center">
+            <h5 class="card-title">Eng Essa Fahem</h5>
+            <p class="text-warning mb-2">★★★★☆</p>
+            <p class="card-text">
+              "You're a genius behind this amazing website!"
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body text-center">
+            <h5 class="card-title">Mister Hossam El-Din El-Khateeb</h5>
+            <p class="text-warning mb-2">★★★★★</p>
+            <p class="card-text">
+              "Thanks for making our website dreams come true!"
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body text-center">
+            <h5 class="card-title">M.Saad</h5>
+            <p class="text-warning mb-2">★★★☆☆</p>
+            <p class="card-text">
+              "Your expertise shines through in every detail!"
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body text-center">
+            <h5 class="card-title">Mister Mohamed Youssef</h5>
+            <p class="text-warning mb-2">★★★★☆</p>
+            <p class="card-text">
+              "Website turned out exactly as envisioned, thanks to you!"
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body text-center">
+            <h5 class="card-title">Mister Mostafa Mansour</h5>
+            <p class="text-warning mb-2">★★★★☆</p>
+            <p class="card-text">
+              "Your work is truly outstanding, thank you!"
+            </p>
+          </div>
+        </div>
+      </div>
+
+        <!-- Reviews Display -->
+      <div class="col-md-4 mb-3">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body text-center">
+            <h5 class="card-title">Mahmoud ibrhem </h5>
+            <p class="text-warning mb-2">★★★★★</p>
+            <p class="card-text">
+              "Thanks for your amazing work on the website!"
+
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body text-center">
+            <h5 class="card-title">Saif El-Din Ayman</h5>
+            <p class="text-warning mb-2">★★★★☆</p>
+            <p class="card-text">
+              "You're the best web designer I've ever worked with!"
+
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body text-center">
+            <h5 class="card-title"> Mohamed Abdel Rahim</h5>
+            <p class="text-warning mb-2">★★★☆☆</p>
+            <p class="card-text">
+              "Your creativity and dedication are truly appreciated!"
+
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body text-center">
+            <h5 class="card-title"> Mohamed Samir </h5>
+            <p class="text-warning mb-2">★★★★★</p>
+            <p class="card-text">
+              "Great job on bringing the website to life!"
+
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body text-center">
+            <h5 class="card-title"> Hossam Hassan</h5>
+            <p class="text-warning mb-2">★★★★☆</p>
+            <p class="card-text">
+              "Thank you for your hard work and commitment!"
+
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body text-center">
+            <h5 class="card-title"> Abdel Rahaman Mohamed</h5>
+            <p class="text-warning mb-2">★★★★☆</p>
+            <p class="card-text">
+              "You're a genius behind this amazing website!"
+
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body text-center">
+            <h5 class="card-title"> Omar saad</h5>
+            <p class="text-warning mb-2">★★★★★</p>
+            <p class="card-text">
+              "Thanks for making our website dreams come true!"
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body text-center">
+            <h5 class="card-title"> Mohamed Abdel Nasser</h5>
+            <p class="text-warning mb-2">★★★☆☆</p>
+            <p class="card-text">
+              "Your expertise shines through in every detail!"
+
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body text-center">
+            <h5 class="card-title"> Yossef Khaled</h5>
+            <p class="text-warning mb-2">★★★★☆</p>
+
+            <p class="card-text">
+              "Website turned out exactly as envisioned, thanks to you!"
+
+            </p>
+          </div>
+        </div>
+      </div>
+
+  </div>
+
+
+  <!-- Bootstrap JS -->
+  <script src="bootstrap.bundle.min.js"></script>
+
+  <script>
+    const reviewForm = document.getElementById("reviewForm");
+    const reviewsContainer = document.getElementById("reviewsContainer");
+
+    // حذف أي رسائل قديمة
+    localStorage.removeItem("reviews");
+    let reviews = [];
+
+    function displayReviews() {
+      // إزالة أي dynamic reviews قديمة
+      const dynamicReviews = reviewsContainer.querySelectorAll(".dynamic-review");
+      dynamicReviews.forEach(el => el.remove());
+
+      // إضافة المراجعات الجديدة فوق الكروت الثابتة
+      reviews.forEach((review, index) => {
+        const div = document.createElement("div");
+        div.classList.add("col-md-4", "mb-3", "dynamic-review");
+        div.innerHTML = `
+        <div class="card h-100 shadow-sm">
+          <div class="card-body text-center">
+            <h5 class="card-title">${review.name}</h5>
+            <p class="text-warning mb-2">${review.rating}</p>
+            <p class="card-text">${review.message}</p>
+          </div>
+        </div>
+      `;
+
+        // إضافة تأثير مسح الكارد عند النقر
+        div.addEventListener("click", () => {
+          div.classList.add("deleting");
+          setTimeout(() => {
+            reviews.splice(index, 1); // إزالة من المصفوفة
+            displayReviews(); // إعادة العرض
+          }, 300); // مدة الانتقال تطابق CSS
+        });
+
+        reviewsContainer.prepend(div);
+      });
+    }
+
+    displayReviews();
+
+    reviewForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const name = document.getElementById("reviewName").value;
+      const message = document.getElementById("reviewMessage").value;
+      const rating = document.getElementById("reviewRating").value;
+
+      const newReview = { name, message, rating };
+      reviews.unshift(newReview);
+      displayReviews();
+      reviewForm.reset();
+    });
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="img (4).jpg" type="image/x-icon">
+  <meta name="description" content="Free Web tutorials Welcome To WE School Class 2/4">
+  <meta name="outhor" content="Engineer Mahmoud ibrhem">
+  <meta name="keywords" content="Html,css,JS,Coding Html and css">
+  <title>Hossam El-Din El-Khateeb - Math Teacher CV</title>
+
+  <!-- link Bootstrap -->
+  <link href="bootstrap.min.css" rel="stylesheet">
+
+  <!-- link Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!--  link Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(135deg, #fbc2eb, #a6c1ee, #fad0c4, #ff9a9e);
+      background-size: 400% 400%;
+      animation: gradientBG 5s ease infinite;
+      padding: 25px;
+    }
+
+    @keyframes gradientBG {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    .cv-container {
+      max-width: 1000px;
+      margin: auto;
+      background: #fff;
+      border-radius: 25px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    }
+
+    .header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      background: linear-gradient(90deg, #ff512f, #dd2476);
+      color: #fff;
+      padding: 30px;
+      gap: 20px;
+      border-bottom-left-radius: 25px;
+      border-bottom-right-radius: 25px;
+    }
+
+    .header img {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      border: 4px solid #fff;
+      object-fit: cover;
+      transition: transform 0.3s;
+    }
+
+    .header img:hover {
+      transform: scale(1.05);
+    }
+
+    .header .info h1 {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+
+    .header .info p {
+      margin: 3px 0;
+    }
+
+    .main-content {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .left-panel {
+      flex: 1 1 35%;
+      background: #f0f0f0;
+      padding: 35px 25px;
+      min-width: 250px;
+    }
+
+    .right-panel {
+      flex: 1 1 65%;
+      padding: 35px 30px;
+      min-width: 300px;
+    }
+
+    .section-title {
+      font-weight: 700;
+      font-size: 18px;
+      margin-bottom: 12px;
+      color: #dd2476;
+      border-left: 5px solid #dd2476;
+      padding-left: 10px;
+      transition: color 0.3s, border-color 0.3s;
+    }
+
+    .section-title:hover {
+      color: #ff512f;
+      border-color: #ff512f;
+    }
+
+    .left-panel ul,
+    .right-panel ul {
+      padding-left: 20px;
+    }
+
+    .left-panel li,
+    .right-panel li {
+      margin-bottom: 10px;
+      font-size: 15px;
+      display: flex;
+      align-items: center;
+    }
+
+    .left-panel li i {
+      color: #ffbf00;
+      margin-right: 8px;
+    }
+
+    .small-text {
+      font-size: 14px;
+      color: #6b7280;
+    }
+
+    @media(max-width: 768px) {
+      .header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .main-content {
+        flex-direction: column;
+      }
+
+      .left-panel,
+      .right-panel {
+        flex: 1 1 100%;
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="cv-container">
+
+    <!-- HEADER -->
+    <div class="header">
+      <img src="img (4).jpg" alt="Profile Photo">
+      <div class="info">
+        <h1>Hossam El-Din El-Khateeb</h1>
+        <p>Math Teacher</p>
+        <p><i class="fa fa-envelope"></i> example@gmail.com</p>
+        <p><i class="fa fa-phone"></i> +20 10X XXX XXXX</p>
+      </div>
+    </div>
+
+    <div class="main-content">
+
+      <!-- LEFT PANEL -->
+      <div class="left-panel">
+        <div class="section-title">Skills</div>
+        <ul>
+          <li><i class="fa fa-check-circle"></i> Lesson Planning</li>
+          <li><i class="fa fa-check-circle"></i> Classroom Management</li>
+          <li><i class="fa fa-check-circle"></i> Problem Solving</li>
+          <li><i class="fa fa-check-circle"></i> Math Experiments & Models</li>
+          <li><i class="fa fa-check-circle"></i> Student Assessment</li>
+        </ul>
+
+        <div class="section-title">Languages</div>
+        <ul>
+          <li><i class="fa fa-language"></i> Arabic – Native</li>
+          <li><i class="fa fa-language"></i> English – Excellent</li>
+        </ul>
+      </div>
+
+      <!-- RIGHT PANEL -->
+      <div class="right-panel">
+        <div class="section-title">Professional Profile</div>
+        <p>Dedicated Math Teacher with extensive experience teaching secondary school students. Skilled in explaining
+          complex mathematical concepts in an engaging and simple way. Passionate about developing students' analytical
+          and problem-solving skills.</p>
+
+        <div class="section-title">Education</div>
+        <p>Bachelor of Science in Mathematics<br><span class="small-text">Faculty of Science</span></p>
+
+        <div class="section-title">Experience</div>
+        <ul>
+          <li>Teaching Mathematics to Secondary and Preparatory students</li>
+          <li>Preparing lesson plans and interactive exercises</li>
+          <li>Using real-life examples to explain concepts</li>
+          <li>Assessing students through tests, quizzes, and projects</li>
+          <li>Encouraging analytical thinking and problem-solving</li>
+        </ul>
+
+        <div class="section-title">Achievements & Activities</div>
+        <ul>
+          <li>Organized Math competitions and workshops</li>
+          <li>Participated in teacher training programs</li>
+          <li>Mentored students in mathematics projects and research</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+<script src="bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

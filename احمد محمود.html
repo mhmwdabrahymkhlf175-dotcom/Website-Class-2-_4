@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" href="احمد منجر.jpg" type="image/x-icon">
+  <meta name="description" content="Free Web tutorials Welcome To WE School Class 2/4">
+  <meta name="outhor" content="Engineer Mahmoud ibrahem">
+  <meta name="keywords" content="Html,css,JS,Coding Html and css">
+  <title>Ahmed Mahmoud | Premium Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap -->
+  <link href="bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    /* Body & Font */
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #2c3e50, #4b0082);
+      /* Dark Blue to Purple Gradient */
+      color: #f4f4f4;
+      font-family: 'Segoe UI', sans-serif;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    /* Navbar */
+    .navbar {
+      background: rgba(0, 0, 0, 0.8);
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+      transition: all 0.3s ease;
+    }
+
+    .navbar .navbar-brand {
+      font-weight: 700;
+      color: #ffd700;
+      /* Gold Accent */
+      letter-spacing: 1px;
+    }
+
+    /* Hero Section */
+    .hero {
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(120deg, #4b0082, #8a2be2);
+      /* Purple Gradient */
+      border-radius: 25px;
+      margin: 40px;
+      padding: 40px;
+      box-shadow: 0 10px 50px rgba(0, 0, 0, 0.3);
+      transition: all 0.5s ease;
+    }
+
+    .hero:hover {
+      transform: scale(1.02);
+    }
+
+    .profile {
+      width: 250px;
+      border-radius: 50%;
+      border: 5px solid #ffd700;
+      box-shadow: 0 0 25px rgba(255, 215, 0, 0.6);
+      transition: all 0.4s ease;
+    }
+
+    .profile:hover {
+      transform: scale(1.05) rotate(3deg);
+    }
+
+    /* Sections */
+    .section {
+      padding: 80px 0;
+    }
+
+    /* Section Titles */
+    .section h2 {
+      font-weight: 700;
+      color: #ffd700;
+      text-align: center;
+      margin-bottom: 50px;
+      letter-spacing: 1px;
+    }
+
+    /* Skills */
+    .skill {
+      background: linear-gradient(135deg, #8a2be2, #00ced1);
+      /* Purple to Cyan Gradient */
+      color: #fff;
+      padding: 15px;
+      border-radius: 50px;
+      text-align: center;
+      font-weight: 600;
+      margin-bottom: 20px;
+      transition: all 0.4s ease;
+    }
+
+    .skill:hover {
+      transform: translateY(-8px) scale(1.05);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Cards */
+    .card {
+      background: linear-gradient(135deg, #4b0082, #6a5acd);
+      /* Dark Purple Gradient */
+      border: none;
+      border-radius: 25px;
+      padding: 25px;
+      margin-bottom: 25px;
+      transition: all 0.4s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Contact Form */
+    #contactForm input,
+    #contactForm textarea {
+      border-radius: 15px;
+      border: 1px solid #ffd700;
+      background: rgba(255, 255, 255, 0.05);
+      color: #fff;
+      transition: all 0.3s ease;
+    }
+
+    #contactForm input:focus,
+    #contactForm textarea:focus {
+      box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+      border-color: #ffd700;
+    }
+
+    .error {
+      color: #ff4d4d;
+      font-size: 13px;
+      display: none;
+      margin-top: -8px;
+      margin-bottom: 10px;
+    }
+
+    #contactForm .btn {
+      background: linear-gradient(90deg, #ffd700, #ff8c00);
+      /* Gold to Orange */
+      color: #000;
+      font-weight: 700;
+      transition: all 0.4s ease;
+    }
+
+    #contactForm .btn:hover {
+      transform: translateY(-3px) scale(1.03);
+      box-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
+    }
+
+    /* Fade-in Animations */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 1s ease-out;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+    <div class="container">
+      <a class="navbar-brand fs-4 fw-semibold active" href="#">Ahmed Mahmoud</a>
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav ms-auto text-center">
+          <li class="nav-item"><a class="nav-link fs-4 fw-semibold active" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link fs-4 fw-semibold" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link fs-4 fw-semibold" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero section fade-in">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <h1 class="fw-bold">Ahmed Mahmoud</h1>
+          <p class="fw-semibold">Front-End Developer</p>
+          <p>Building professional web experiences with premium design, smooth gradients, and elegant animations.</p>
+          <a href="cv.pdf" download class="btn me-2">Download CV</a>
+          <a href="#contact" class="btn btn-outline-light">Contact Me</a>
+        </div>
+        <div class="col-md-6 text-center mt-4">
+          <img src="احمد منجر.jpg" class="profile fade-in">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="section fade-in" id="skills">
+    <div class="container">
+      <h2>Skills</h2>
+      <div class="row g-3 justify-content-center">
+        <div class="col-6 col-md-2">
+          <div class="skill">HTML</div>
+        </div>
+        <div class="col-6 col-md-2">
+          <div class="skill">CSS</div>
+        </div>
+        <div class="col-6 col-md-2">
+          <div class="skill">JavaScript</div>
+        </div>
+        <div class="col-6 col-md-2">
+          <div class="skill">Bootstrap</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="section fade-in" id="projects">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-4">
+          <div class="card">
+            <h5>Portfolio Website</h5>
+            <p>Elegant Gradient Design</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <h5>Landing Page</h5>
+            <p>Professional UI</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <h5>To-Do App</h5>
+            <p>Interactive JS Project</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section fade-in">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <form id="contactForm" class="col-md-6 mx-auto">
+
+        <input id="name" class="form-control mb-2" placeholder="Your Name">
+        <div id="nameError" class="error">Please enter your name</div>
+
+        <input id="email" type="email" class="form-control mb-2" placeholder="Your Email">
+        <div id="emailError" class="error">Please enter your email</div>
+
+        <textarea id="message" class="form-control mb-2" placeholder="Your Message"></textarea>
+        <div id="messageError" class="error">Please enter your message</div>
+
+        <button class="btn w-100 mt-3">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="text-center py-4 text-muted">
+    &copy; 2026 Ahmed Mahmoud
+  </footer>
+
+  <script>
+    // Form Validation
+    const form = document.getElementById("contactForm");
+    const inputs = ["name", "email", "message"];
+    inputs.forEach(id => {
+      document.getElementById(id).addEventListener("input", () => {
+        document.getElementById(id + "Error").style.display = "none";
+      });
+    });
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      let valid = true;
+      inputs.forEach(id => {
+        const input = document.getElementById(id);
+        const error = document.getElementById(id + "Error");
+        if (input.value.trim() === "") {
+          error.style.display = "block";
+          valid = false;
+        }
+      });
+      if (valid) {
+        alert("Message sent successfully ✔️");
+        form.reset();
+      }
+    });
+
+    // Scroll Fade-in Animation
+    const faders = document.querySelectorAll(".fade-in");
+    const appearOptions = { threshold: 0.1 };
+    const appearOnScroll = new IntersectionObserver(function (entries, appearOnScroll) {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("visible");
+        appearOnScroll.unobserve(entry.target);
+      });
+    }, appearOptions);
+    faders.forEach(fader => appearOnScroll.observe(fader));
+  </script>
+  <script src="bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

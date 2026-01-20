@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bilal Emad | Portfolio</title>
+    <link rel="shortcut icon" href="بلال.jpg" type="image/x-icon">
+    <meta name="description" content="Free Web tutorials Welcome To WE School Class 2/4">
+    <meta name="outhor" content="Engineer Mahmoud ibrahem">
+    <meta name="keywords" content="Html,css,JS,Coding Html and css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --main: #00f5d4;
+            --sec: #3a86ff;
+            --dark: #020617;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: var(--dark);
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            background: rgba(2, 6, 23, .9);
+            backdrop-filter: blur(10px);
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding-top: 100px;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(circle at top left, var(--sec), transparent 40%),
+                radial-gradient(circle at bottom right, var(--main), transparent 40%);
+        }
+
+        /* AVATAR */
+        .avatar-box {
+            position: relative;
+            width: 260px;
+            height: 260px;
+            margin: auto;
+        }
+
+        .avatar-box::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 50%;
+            border: 4px solid transparent;
+            border-top-color: var(--main);
+            border-right-color: var(--sec);
+            animation: spin 6s linear infinite;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg)
+            }
+        }
+
+        .avatar-box img {
+            width: 220px;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        /* HERO TEXT */
+        .hero-content {
+            position: relative;
+            z-index: 2
+        }
+
+        .hero h1 span {
+            color: var(--main)
+        }
+
+        /* BUTTON */
+        .btn-main {
+            background: linear-gradient(45deg, var(--sec), var(--main));
+            border: none;
+            padding: 14px 36px;
+            border-radius: 30px;
+            color: #fff;
+            transition: .4s;
+        }
+
+        .btn-main:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px var(--main);
+        }
+
+        /* SECTIONS */
+        .section {
+            padding: 100px 0
+        }
+
+        .title {
+            text-align: center;
+            font-weight: 700;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .title::after {
+            content: '';
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--sec), var(--main));
+            position: absolute;
+            left: 50%;
+            bottom: -15px;
+            transform: translateX(-50%);
+        }
+
+        /* CARDS */
+        .cardx {
+            background: #020617;
+            border: 1px solid rgba(255, 255, 255, .1);
+            border-radius: 20px;
+            padding: 30px;
+            transition: .4s;
+        }
+
+        .cardx:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 0 30px rgba(0, 245, 212, .3);
+        }
+
+        /* SKILLS */
+        .progress {
+            height: 8px;
+            border-radius: 20px;
+        }
+
+        .progress-bar {
+            background: linear-gradient(90deg, var(--sec), var(--main));
+        }
+
+        /* Sections */
+        .section {
+            padding: 60px 20px;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.7);
+            text-align: center;
+            padding: 25px 10px;
+            color: #fff;
+            backdrop-filter: blur(10px);
+        }
+
+        .cv-container {
+            max-width: 1000px;
+            margin: auto;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .header {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            background:
+                radial-gradient(circle at left, #7c3aed, #050816 55%),
+                radial-gradient(circle at right, #06b6d4, #050816 55%);
+            color: #fff;
+            padding: 30px;
+            gap: 20px;
+            border-bottom-left-radius: 25px;
+            border-bottom-right-radius: 25px;
+        }
+
+        .header img {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            border: 4px solid #fff;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .header img:hover {
+            transform: scale(1.05);
+        }
+
+        .header .info h1 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .header .info p {
+            margin: 3px 0;
+        }
+
+        .main-content {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .left-panel {
+            flex: 1 1 35%;
+            padding: 35px 25px;
+            min-width: 250px;
+            background: radial-gradient(circle at left, #7c3aed, #050816 55%);
+        }
+
+        .right-panel {
+            flex: 1 1 65%;
+            padding: 35px 30px;
+            min-width: 300px;
+            background:
+                radial-gradient(circle at right, #06b6d4, #050816 55%);
+        }
+
+        .section-title {
+            font-weight: 700;
+            font-size: 18px;
+            margin-bottom: 12px;
+            color: #36d1dc;
+            border-left: 5px solid #36d1dc;
+            padding-left: 10px;
+            transition: color 0.3s, border-color 0.3s;
+        }
+
+        .section-title:hover {
+            color: #5b86e5;
+            border-color: #5b86e5;
+        }
+
+        .left-panel ul,
+        .right-panel ul {
+            padding-left: 20px;
+        }
+
+        .left-panel li,
+        .right-panel li {
+            margin-bottom: 10px;
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .left-panel li i {
+            color: #ffbf00;
+            margin-right: 8px;
+        }
+
+        .small-text {
+            font-size: 14px;
+            color: #6b7280;
+        }
+
+
+
+        @media(max-width: 768px) {
+            .header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .main-content {
+                flex-direction: column;
+            }
+
+            .left-panel,
+            .right-panel {
+                flex: 1 1 100%;
+                padding: 20px;
+            }
+        }
+
+        /* Contact Form */
+        .error {
+            color: #ff4d4d;
+            font-size: 13px;
+            display: none;
+            margin-top: -8px;
+            margin-bottom: 10px;
+        }
+
+        #contactForm .btn {
+            background: linear-gradient(90deg, #00f0ff, #ff00d0);
+            border: none;
+            color: #fff;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        #contactForm .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 20px #0ff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+        <div class="container">
+            <a class="navbar-brand fs-4 fw-semibold" href="#"> Bilal Emad </a>
+
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="nav">
+                <ul class="navbar-nav ms-auto text-center">
+                    <li class="nav-item"><a class="nav-link active fs-4 fw-semibold" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link fs-4 fw-semibold" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link fs-4 fw-semibold" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link fs-4 fw-semibold" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="container hero-content">
+            <div class="row align-items-center">
+
+                <div class="col-lg-5 mb-4">
+                    <div class="avatar-box">
+                        <!-- حط صورتك هنا -->
+                        <img src="بلال.jpg">
+                    </div>
+                </div>
+
+                <div class="col-lg-7">
+                    <h1 class="fw-semibold">Bilal <span>Emad</span></h1>
+                    <p class="lead text-info">
+                        Professional Frontend Developer <br>
+                        Modern • Responsive • Animated Websites
+                    </p>
+                    <a href="#contact" class="btn btn-main mt-3">Hire Me</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <h2 class="title">About Me</h2>
+        <p class="text-center col-md-8 mx-auto">I craft modern purple-themed websites with elegant glow and responsive
+            layouts.</p>
+    </section>
+
+    <section id="skills" class="section">
+        <h2 class="title">Skills</h2>
+        <label>HTML & CSS</label>
+        <div class="progress mb-4">
+            <div class="progress-bar" style="width:95%"></div>
+        </div>
+        <label>Bootstrap</label>
+        <div class="progress mb-4">
+            <div class="progress-bar" style="width:90%"></div>
+        </div>
+        <label>JavaScript</label>
+        <div class="progress mb-4">
+            <div class="progress-bar" style="width:85%"></div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <h2 class="title">Projects</h2>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="cardx text-center">Portfolio</div>
+            </div>
+            <div class="col-md-4">
+                <div class="cardx text-center">Landing Page</div>
+            </div>
+            <div class="col-md-4">
+                <div class="cardx text-center">Business Website</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="text-center mb-4">Contact Me</h2>
+
+            <form id="contactForm" class="col-md-6 mx-auto">
+
+                <!-- Name -->
+                <input id="name" class="form-control mb-2" placeholder="Your Name">
+                <div id="nameError" class="error">Please enter your name</div>
+
+                <!-- Email -->
+                <input id="email" type="email" class="form-control mb-2" placeholder="Your Email">
+                <div id="emailError" class="error">Please enter your email</div>
+
+                <!-- Message -->
+                <textarea id="message" class="form-control mb-2" placeholder="Your Message"></textarea>
+                <div id="messageError" class="error">Please enter your message</div>
+
+                <button class="btn w-100 mt-3">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+
+    <footer class="text-center py-4">&copy; 2025 Bilal Emad </footer>
+
+    <script>
+        const form = document.getElementById("contactForm");
+        const inputs = ["name", "email", "message"];
+
+        // Hide error while typing
+        inputs.forEach(id => {
+            document.getElementById(id).addEventListener("input", () => {
+                document.getElementById(id + "Error").style.display = "none";
+            });
+        });
+
+        // Form submit validation
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+            let valid = true;
+            inputs.forEach(id => {
+                const input = document.getElementById(id);
+                const error = document.getElementById(id + "Error");
+                if (input.value.trim() === "") {
+                    error.style.display = "block";
+                    valid = false;
+                }
+            });
+            if (valid) {
+                alert("Message sent successfully ✔️");
+                form.reset();
+            }
+        });
+    </script>
+    <script src="bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

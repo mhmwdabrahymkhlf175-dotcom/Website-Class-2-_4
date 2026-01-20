@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Mohamed Salah El-Din | Portfolio</title>
+  <link rel="shortcut icon" href="img (7).png" type="image/x-icon">
+  <meta name="description" content="Free Web tutorials Welcome To WE School Class 2/4">
+  <meta name="outhor" content="Engineer Mahmoud ibrahem">
+  <meta name="keywords" content="Html,css,JS,Coding Html and css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap -->
+  <link href="bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background: #0a0f20;
+      color: #e0e0e0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .navbar {
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(8px);
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+    }
+
+    .glass {
+      background: rgba(10, 15, 32, 0.6);
+      backdrop-filter: blur(12px);
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 0 30px rgba(0, 255, 255, 0.2);
+      border: 1px solid rgba(0, 255, 255, 0.2);
+    }
+
+    .profile {
+      width: 260px;
+      border-radius: 50%;
+      border: 3px solid #0ff;
+      box-shadow: 0 0 15px #0ff;
+    }
+
+    .section {
+      padding: 80px 0;
+    }
+
+    .skill {
+      background: rgba(0, 255, 255, 0.1);
+      padding: 15px;
+      border-radius: 12px;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    .card {
+      background: rgba(0, 255, 255, 0.1);
+      color: #fff;
+      border: none;
+      border-radius: 15px;
+      padding: 20px;
+      margin-bottom: 20px;
+      transition: transform .3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 20px #0ff;
+    }
+
+    .error {
+      color: #ff4d4d;
+      font-size: 13px;
+      display: none;
+      margin-top: -8px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+    <div class="container">
+      <a class="navbar-brand fs-4 fw-semibold active" href="#">Mohamed Salah El-Din</a>
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav ms-auto text-center">
+          <li class="nav-item"><a class="nav-link fs-4 fw-semibold active" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link fs-4 fw-semibold" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link fs-4 fw-semibold" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <div class="glass">
+            <h1 class="fw-bold">Mohamed Salah El-Din</h1>
+            <p class="text-info">Front-End Developer</p>
+            <p>I create futuristic and modern web designs with neon style.</p>
+            <a href="#contact" class="btn btn-outline-info">Contact Me</a>
+          </div>
+        </div>
+        <div class="col-md-6 text-center mt-4">
+          <img src="img (7).png" class="profile">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="section" id="skills">
+    <div class="container">
+      <h2 class="text-center mb-5">Skills</h2>
+      <div class="row g-3">
+        <div class="col-6 col-md-3">
+          <div class="skill">HTML</div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="skill">CSS</div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="skill">JavaScript</div>
+        </div>
+        <div class="col-6 col-md-3">
+          <div class="skill">Bootstrap</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="section" id="projects">
+    <div class="container">
+      <h2 class="text-center mb-5">Projects</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card">
+            <h5>Portfolio Website</h5>
+            <p>Futuristic Neon Design</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <h5>Landing Page</h5>
+            <p>Interactive Business Layout</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <h5>To-Do App</h5>
+            <p>Modern JS App</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section" id="contact">
+    <div class="container">
+      <h2 class="text-center mb-4">Contact Me</h2>
+
+      <form id="contactForm" class="glass col-md-6 mx-auto">
+
+        <!-- Name -->
+        <input id="name" class="form-control mb-2" placeholder="Your Name">
+        <div id="nameError" class="error">Please enter your name</div>
+
+        <!-- Email -->
+        <input id="email" type="email" class="form-control mb-2" placeholder="Your Email">
+        <div id="emailError" class="error">Please enter your email</div>
+
+        <!-- Message -->
+        <textarea id="message" class="form-control mb-2" placeholder="Your Message"></textarea>
+        <div id="messageError" class="error">Please enter your message</div>
+
+        <button class="btn btn-outline-info w-100 mt-3">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="text-center py-4 text-muted">
+    &copy; 2026 Mohamed Salah El-Din
+  </footer>
+
+  <script>
+    const form = document.getElementById("contactForm");
+
+    const inputs = ["name", "email", "message"];
+
+    // Hide error on input
+    inputs.forEach(id => {
+      document.getElementById(id).addEventListener("input", () => {
+        document.getElementById(id + "Error").style.display = "none";
+      });
+    });
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      let valid = true;
+
+      inputs.forEach(id => {
+        const input = document.getElementById(id);
+        const error = document.getElementById(id + "Error");
+
+        if (input.value.trim() === "") {
+          error.style.display = "block";
+          valid = false;
+        }
+      });
+
+      if (valid) {
+        alert("Message sent successfully ✔️");
+        form.reset();
+      }
+    });
+  </script>
+  <script src="bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

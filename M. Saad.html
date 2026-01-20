@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="دكتر سعد.jpg" type="image/x-icon">
+  <meta name="description" content="Free Web tutorials Welcome To WE School Class 2/4">
+  <meta name="outhor" content="Engineer Mahmoud ibrhem">
+  <meta name="keywords" content="Html,css,JS,Coding Html and css">
+  <title>دكتور سعد - مدرس Life Skills</title>
+
+
+  <!-- link Bootstrap -->
+  <link href="bootstrap.min.css" rel="stylesheet">
+
+  <!-- link Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!--  link Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Cairo', sans-serif;
+      background: linear-gradient(135deg, #fbc2eb, #a6c1ee, #f6d365, #fda085);
+      background-size: 400% 400%;
+      animation: gradientBG 5s ease infinite;
+      padding: 25px;
+      direction: rtl;
+    }
+
+    @keyframes gradientBG {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    .cv-container {
+      max-width: 1000px;
+      margin: auto;
+      background: #fff;
+      border-radius: 25px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    }
+
+    .header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      background: linear-gradient(90deg, #ff7e5f, #feb47b);
+      color: #fff;
+      padding: 30px;
+      gap: 20px;
+      border-bottom-left-radius: 25px;
+      border-bottom-right-radius: 25px;
+    }
+
+    .header img {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      border: 4px solid #fff;
+      object-fit: cover;
+      transition: transform 0.3s;
+    }
+
+    .header img:hover {
+      transform: scale(1.05);
+    }
+
+    .header .info h1 {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+
+    .header .info p {
+      margin: 3px 0;
+    }
+
+    .main-content {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .left-panel {
+      flex: 1 1 35%;
+      background: #f0f0f0;
+      padding: 35px 25px;
+      min-width: 250px;
+    }
+
+    .right-panel {
+      flex: 1 1 65%;
+      padding: 35px 30px;
+      min-width: 300px;
+    }
+
+    .section-title {
+      font-weight: 700;
+      font-size: 18px;
+      margin-bottom: 12px;
+      color: #ff7e5f;
+      border-right: 5px solid #ff7e5f;
+      padding-right: 10px;
+      transition: color 0.3s, border-color 0.3s;
+    }
+
+    .section-title:hover {
+      color: #feb47b;
+      border-color: #feb47b;
+    }
+
+    .left-panel ul,
+    .right-panel ul {
+      padding-right: 20px;
+    }
+
+    .left-panel li,
+    .right-panel li {
+      margin-bottom: 10px;
+      font-size: 15px;
+      display: flex;
+      align-items: center;
+    }
+
+    .left-panel li i {
+      color: #ffbf00;
+      margin-left: 8px;
+    }
+
+    .small-text {
+      font-size: 14px;
+      color: #6b7280;
+    }
+
+    @media(max-width: 768px) {
+      .header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .main-content {
+        flex-direction: column;
+      }
+
+      .left-panel,
+      .right-panel {
+        flex: 1 1 100%;
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="cv-container">
+
+    <!-- HEADER -->
+    <div class="header">
+      <img src="دكتر سعد.jpg" alt="صورة الملف الشخصي">
+      <div class="info">
+        <h1>دكتور سعد</h1>
+        <p>مدرس Life Skills</p>
+        <p><i class="fa fa-envelope"></i> example@gmail.com</p>
+        <p><i class="fa fa-phone"></i> 010X XXX XXXX</p>
+      </div>
+    </div>
+
+    <div class="main-content">
+
+      <!-- LEFT PANEL -->
+      <div class="left-panel">
+        <div class="section-title">المهارات</div>
+        <ul>
+          <li><i class="fa fa-check-circle"></i> تطوير مهارات الحياة الشخصية والاجتماعية</li>
+          <li><i class="fa fa-check-circle"></i> إدارة الوقت والتخطيط الشخصي</li>
+          <li><i class="fa fa-check-circle"></i> تحسين التواصل وبناء العلاقات</li>
+          <li><i class="fa fa-check-circle"></i> التوجيه والإرشاد للطلاب</li>
+          <li><i class="fa fa-check-circle"></i> التفكير النقدي وحل المشكلات</li>
+        </ul>
+
+        <div class="section-title">اللغات</div>
+        <ul>
+          <li><i class="fa fa-language"></i> العربية – اللغة الأم</li>
+          <li><i class="fa fa-language"></i> الإنجليزية – ممتاز</li>
+        </ul>
+      </div>
+
+      <!-- RIGHT PANEL -->
+      <div class="right-panel">
+        <div class="section-title">الملف الشخصي</div>
+        <p>خبير في تعليم Life Skills وتطوير المهارات الحياتية والاجتماعية للطلاب، يمتلك خبرة واسعة في توجيه الطلاب نحو
+          تحسين سلوكياتهم، تعزيز ثقتهم بأنفسهم، وتنمية مهارات التفكير النقدي وحل المشكلات.</p>
+
+        <div class="section-title">التعليم</div>
+        <p>دكتوراه في التعليم / Life Skills Development<br><span class="small-text">كلية التربية</span></p>
+
+        <div class="section-title">الخبرات العملية</div>
+        <ul>
+          <li>تدريس مهارات الحياة للطلاب في المدارس والمراكز التعليمية</li>
+          <li>تحضير برامج وورش عمل تفاعلية</li>
+          <li>توجيه الطلاب في تحسين مهارات التواصل وإدارة الوقت</li>
+          <li>تقييم الطلاب من خلال مشاريع وتمارين عملية</li>
+          <li>تشجيع التفكير النقدي وحل المشكلات اليومية</li>
+        </ul>
+
+        <div class="section-title">الإنجازات والأنشطة</div>
+        <ul>
+          <li>تنظيم ورش عمل تطوير مهارات Life Skills</li>
+          <li>المشاركة في برامج تطوير المعلمين والمتخصصين</li>
+          <li>تقديم استشارات للطلاب وأولياء الأمور لتعزيز المهارات الشخصية والاجتماعية</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+      <!-- Memories -->
+    <section id="Memories" class="mt-3 shadow-lg ">
+        <video width="100%" height="700vh" poster="img/دكتر سعد.jpg" muted loop controls>
+            <source src="فديو دكتر سعد.mp4" type="video/mp4">Your
+            browser does not support the video tag.
+        </video>
+    </section>
+    <script src="bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
