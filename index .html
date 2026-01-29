@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+  <meta name="description" content="We aim to provide valuable and useful information about Website Welcome To WE School Class 2/4 where we offer rich and diverse content that meets the needs of  our visitors and helps them better understand the topic">
+  <meta name="outhor" content="Engineer Mahmoud Ebrahim">
+  <meta name="keywords" content="Html,css,JS,Coding Html and css">
+  <title>X O Challenge</title>
+  <!-- Bootstrap -->
+  <link href="bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    /* GAME CONTAINER */
+    .game-box {
+      background: rgba(255, 255, 255, .15);
+      backdrop-filter: blur(15px);
+      padding: 30px;
+      border-radius: 25px;
+      width: 360px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, .4);
+      color: #fff;
+    }
+
+    /* CELLS */
+    .cell {
+      width: 100px;
+      height: 100px;
+      font-size: 42px;
+      font-weight: bold;
+      border-radius: 18px;
+      border: none;
+    }
+
+    .cell:hover {
+      background: rgba(255, 255, 255, .3);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- GAME -->
+  <div class="game-box text-center">
+    <h3>X O Challenge</h3>
+    <p class="text-light">Beat the computer to continue</p>
+
+    <div class="d-flex justify-content-center gap-2 mb-2">
+      <button class="btn btn-light cell" onclick="playerMove(0)"></button>
+      <button class="btn btn-light cell" onclick="playerMove(1)"></button>
+      <button class="btn btn-light cell" onclick="playerMove(2)"></button>
+    </div>
+    <div class="d-flex justify-content-center gap-2 mb-2">
+      <button class="btn btn-light cell" onclick="playerMove(3)"></button>
+      <button class="btn btn-light cell" onclick="playerMove(4)"></button>
+      <button class="btn btn-light cell" onclick="playerMove(5)"></button>
+    </div>
+    <div class="d-flex justify-content-center gap-2">
+      <button class="btn btn-light cell" onclick="playerMove(6)"></button>
+      <button class="btn btn-light cell" onclick="playerMove(7)"></button>
+      <button class="btn btn-light cell" onclick="playerMove(8)"></button>
+    </div>
+  </div>
+
+  <!-- START MODAL -->
+  <div class="modal fade" id="startModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content text-center p-4">
+        <h4>Welcome</h4>
+        <p>Computer plays smart… good luck 😎</p>
+        <button class="btn btn-primary" data-bs-dismiss="modal">Start Game</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- RESULT MODAL -->
+  <div class="modal fade" id="resultModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content text-center p-4">
+        <h4 id="resultText"></h4>
+        <button class="btn btn-secondary mt-2" onclick="restart()">Play Again</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="bootstrap.bundle.min.js"></script>
+
+  <script>
+    let board = ["", "", "", "", "", "", "", "", ""];
+    let cells = document.querySelectorAll(".cell");
+    let gameOver = false;
+
+    const wins = [
+      [0, 1, 2], [3, 4, 5], [6, 7, 8],
+      [0, 3, 6], [1, 4, 7], [2, 5, 8],
+      [0, 4, 8], [2, 4, 6]
+    ];
+
+    // Show modal on load
+    window.onload = () => {
+      new bootstrap.Modal(document.getElementById("startModal")).show();
+    };
+
+    function playerMove(i) {
+      if (board[i] || gameOver) return;
+      board[i] = "X";
+      cells[i].innerText = "X";
+      if (checkEnd()) return;
+      setTimeout(aiMove, 350);
+    }
+
+    function aiMove() {
+      let move = mediumAI();
+      board[move] = "O";
+      cells[move].innerText = "O";
+      checkEnd();
+    }
+
+    // 🧠 MEDIUM AI (smart but beatable)
+    function mediumAI() {
+      if (Math.random() < 0.7) {
+        // Try to win
+        for (let i = 0; i < 9; i++) {
+          if (board[i] === "") {
+            board[i] = "O";
+            if (checkWinner("O")) { board[i] = ""; return i; }
+            board[i] = "";
+          }
+        }
+        // Block player
+        for (let i = 0; i < 9; i++) {
+          if (board[i] === "") {
+            board[i] = "X";
+            if (checkWinner("X")) { board[i] = ""; return i; }
+            board[i] = "";
+          }
+        }
+      }
+      // Random move
+      let empty = board.map((v, i) => v === "" ? i : null).filter(v => v !== null);
+      return empty[Math.floor(Math.random() * empty.length)];
+    }
+
+    function checkWinner(p) {
+      return wins.some(w => w.every(i => board[i] === p));
+    }
+
+    function checkEnd() {
+      if (checkWinner("X")) {
+        /* =====================================================
+           ✨ ضع هنا لينك الصفحة التي سيتم الانتقال إليها بعد الفوز
+           مثال:
+           window.location.href = "success.html";
+           ===================================================== */
+        window.location.href = "Website.html";
+        return true;
+      }
+
+      if (checkWinner("O") || !board.includes("")) {
+        gameOver = true;
+        document.getElementById("resultText").innerText = "Good luck next time!";
+        new bootstrap.Modal(document.getElementById("resultModal")).show();
+        return true;
+      }
+      return false;
+    }
+
+    function restart() {
+      board = ["", "", "", "", "", "", "", "", ""];
+      cells.forEach(c => c.innerText = "");
+      gameOver = false;
+      bootstrap.Modal.getInstance(document.getElementById("resultModal")).hide();
+    }
+  </script>
+  <!-- 🔊 AUDIO -->
+  <audio id="bgMusic" loop>
+    <source
+      src="Trimmed_Lil Elmohamedy - Ma Tigy Nerkn Elzaal _ ليل المحمدي - ما تيجي نركن الزعل (ألبوم عشوائي 1)(M4A_128K).mp3"
+      type="audio/mpeg">
+  </audio>
+  <script>
+    const music = document.getElementById("bgMusic");
+    music.volume = 0.4;
+
+    document.addEventListener("click", () => {
+      music.play();
+    }, { once: true });
+
+    document.addEventListener("touchstart", () => {
+      music.play();
+    }, { once: true });
+  </script>
+
+</body>
+
+</html>

@@ -5,16 +5,22 @@
     <meta charset="UTF-8">
     <title>Sayyed Mohamed Sayyed | Portfolio</title>
     <link rel="shortcut icon" href="سيد.jpg" type="image/x-icon">
-    <meta name="description" content="Free Web tutorials Welcome To WE School Class 2/4">
-    <meta name="outhor" content="Engineer Mahmoud ibrahem">
+    <meta name="description" content="We aim to provide valuable and useful information about Website Welcome To WE School Class 2/4 where we offer rich and diverse content that meets the needs of  our visitors and helps them better understand the topic">
+    <meta name="outhor" content="Engineer Mahmoud Ebrahim">
     <meta name="keywords" content="Html,css,JS,Coding Html and css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="bootstrap.min.css" rel="stylesheet">
     <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
         :root {
-            --main: #ffd700;
-            --sec: #daa520;
-            --bg: #1a0d00;
+            --main: #88ff00;
+            --sec: #203fda;
+            --bg: #9c7994;
         }
 
         body {
@@ -134,7 +140,8 @@
             </button>
             <div class="collapse navbar-collapse" id="nav">
                 <ul class="navbar-nav ms-auto text-center">
-                    <li class="nav-item"><a class="nav-link fs-4 fw-semibold active" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link fs-4 fw-semibold active" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link fs-4 fw-semibold" href="#about">About</a></li>
                     <li class="nav-item"><a class="nav-link fs-4 fw-semibold" href="#skills">Skills</a></li>
                     <li class="nav-item"><a class="nav-link fs-4 fw-semibold" href="#projects">Projects</a></li>
                     <li class="nav-item"><a class="nav-link fs-4 fw-semibold" href="#contact">Contact</a></li>
@@ -142,7 +149,7 @@
             </div>
         </div>
     </nav>
-
+    <!-- section hero -->
     <section class="hero" id="home">
         <div class="avatar-box">
             <img src="سيد.jpg">
@@ -151,20 +158,20 @@
         <p class="lead">Luxury Frontend Developer<br>Gold Luxury Theme</p>
         <a href="#contact" class="btn btn-main mt-3">Hire Me</a>
     </section>
-
+    <!-- section about -->
     <section id="about" class="section">
         <h2 class="title">About Me</h2>
         <p class="text-center col-md-8 mx-auto">I craft luxurious gold-themed websites with animated cards and smooth
             user interactions.</p>
     </section>
-
+    <!-- section skills -->
     <section id="skills" class="section">
         <h2 class="title">Skills</h2>
         <div class="cardx mb-3">HTML & CSS 95%</div>
         <div class="cardx mb-3">Bootstrap 90%</div>
         <div class="cardx mb-3">JavaScript 85%</div>
     </section>
-
+    <!-- section projects -->
     <section id="projects" class="section">
         <h2 class="title">Projects</h2>
         <div class="row g-4 justify-content-center">
@@ -179,7 +186,6 @@
             </div>
         </div>
     </section>
-
     <!-- Contact -->
     <section id="contact" class="section">
         <div class="container">
@@ -203,6 +209,7 @@
             </form>
         </div>
     </section>
+    <!-- Coding JS form -->
     <script>
         const form = document.getElementById("contactForm");
         const inputs = ["name", "email", "message"];
@@ -232,7 +239,9 @@
             }
         });
     </script>
+    <!-- footer -->
     <footer class="text-center py-4">&copy; 2025 Sayyed Mohamed Sayyed</footer>
+    <!-- link JS  -->
     <script src="bootstrap.min.css"></script>
 </body>
 

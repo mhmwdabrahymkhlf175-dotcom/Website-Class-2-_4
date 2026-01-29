@@ -6,11 +6,18 @@
   <title> Omar Mohamed | Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="عمر محمد.jpg" type="image/x-icon">
-  <meta name="description" content="Free Web tutorials Welcome To WE School Class 2/4">
-  <meta name="outhor" content="Engineer Mahmoud ibrahem">
+  <meta name="description" content="We aim to provide valuable and useful information about Website Welcome To WE School Class 2/4 where we offer rich and diverse content that meets the needs of  our visitors and helps them better understand the topic">
+  <meta name="outhor" content="Engineer Mahmoud Ebrahim">
   <meta name="keywords" content="Html,css,JS,Coding Html and css">
+  <!-- link bootstrap -->
   <link href="bootstrap.min.css" rel="stylesheet">
   <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
     body {
       background: #000;
       color: #0f0;
@@ -81,15 +88,17 @@
 </head>
 
 <body>
+  <!-- navbar -->
   <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
     <div class="container">
-      <a class="navbar-brand fs-4 fw-semibold active" href="#">Omar Mohamed</a>
+      <a class="navbar-brand fs-4 fw-semibold active" href="#home">Omar Mohamed</a>
       <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="nav">
         <ul class="navbar-nav ms-auto text-center">
-          <li class="nav-item"><a class="nav-link fs-4 fw-semibold active" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link fs-4 fw-semibold active" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link fs-4 fw-semibold" href="#about">About</a></li>
           <li class="nav-item"><a class="nav-link fs-4 fw-semibold" href="#skills">Skills</a></li>
           <li class="nav-item"><a class="nav-link fs-4 fw-semibold" href="#projects">Projects</a></li>
           <li class="nav-item"><a class="nav-link fs-4 fw-semibold" href="#contact">Contact</a></li>
@@ -97,8 +106,8 @@
       </div>
     </div>
   </nav>
-
-  <section class="hero" style="padding-top:100px;">
+  <!-- section heto -->
+  <section class="hero" style="padding-top:100px;" id="home">
     <div>
       <img src="عمر محمد.jpg" class="img-fluid rounded-circle shadow-lg" style="width: 400px; height: 400px;">
     </div>
@@ -106,19 +115,19 @@
     <p class="lead">Cyber Frontend Developer<br>Neon & Animated</p>
     <a href="#contact" class="btn btn-main mt-3">Hire Me</a>
   </section>
-
+  <!-- section about -->
   <section id="about" class="section">
     <h2 class="title">About Me</h2>
     <p>I build modern cyber style websites with neon glow and interactive animations.</p>
   </section>
-
+  <!-- section skills-->
   <section id="skills" class="section">
     <h2 class="title">Skills</h2>
     <div class="cardx mb-3">HTML & CSS 95%</div>
     <div class="cardx mb-3">Bootstrap 90%</div>
     <div class="cardx mb-3">JavaScript 85%</div>
   </section>
-
+  <!-- section Projects -->
   <section id="projects" class="section">
     <h2 class="title">Projects</h2>
     <div class="row g-4 justify-content-center">
@@ -133,7 +142,6 @@
       </div>
     </div>
   </section>
-
   <!-- Contact -->
   <section id="contact" class="section">
     <div class="container">
@@ -157,8 +165,9 @@
       </form>
     </div>
   </section>
-
+  <!-- footer -->
   <footer class="text-center py-4">&copy; 2025 Omar Mohamed</footer>
+  <!-- Coding JS Form -->
   <script>
     const form = document.getElementById("contactForm");
     const inputs = ["name", "email", "message"];
@@ -188,6 +197,7 @@
       }
     });
   </script>
+  <!-- link JS  -->
   <script src="bootstrap.bundle.min.js"></script>
 </body>
 

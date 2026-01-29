@@ -5,8 +5,8 @@
   <meta charset="UTF-8">
   <title>Abdelrahman Mohamed | Portfolio</title>
   <link rel="shortcut icon" href="عبد الرحمان.jpg" type="image/x-icon">
-  <meta name="description" content="Free Web tutorials Welcome To WE School Class 2/4">
-  <meta name="outhor" content="Engineer Mahmoud ibrahem">
+  <meta name="description" content="We aim to provide valuable and useful information about Website Welcome To WE School Class 2/4 where we offer rich and diverse content that meets the needs of  our visitors and helps them better understand the topic">
+  <meta name="outhor" content="Engineer Mahmoud Ebrahim">
   <meta name="keywords" content="Html,css,JS,Coding Html and css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -14,6 +14,12 @@
   <link href="bootstrap.min.css" rel="stylesheet">
 
   <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
     body {
       background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
       color: #fff;
@@ -48,6 +54,17 @@
       padding: 90px 0;
     }
 
+    .card1 {
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
+      transition: .3s;
+    }
+
+    .card1:hover {
+      transform: translateY(-8px);
+    }
+
     .skill {
       background: rgba(255, 255, 255, .15);
       padding: 15px;
@@ -72,17 +89,18 @@
 </head>
 
 <body>
-
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
     <div class="container">
-      <a class="navbar-brand fs-4 fw-semibold active" href="#">Abdelrahman Mohamed</a>
+      <a class="navbar-brand fs-4 fw-semibold active" href="#home">Abdelrahman Mohamed</a>
       <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="nav">
         <ul class="navbar-nav ms-auto text-center">
-          <li class="nav-item"><a class="nav-link fs-4 fw-semibold active" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link fs-4 fw-semibold active" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link fs-4 fw-semibold" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link fs-4 fw-semibold" href="#skills">Skills</a></li>
           <li class="nav-item"><a class="nav-link fs-4 fw-semibold" href="#projects">Projects</a></li>
           <li class="nav-item"><a class="nav-link fs-4 fw-semibold" href="#contact">Contact</a></li>
         </ul>
@@ -91,10 +109,10 @@
   </nav>
 
   <!-- Hero -->
-  <section class="hero section">
+  <section class="hero section" id="home">
     <div class="container">
       <div class="row align-items-center">
-        <div class="col-md-6">
+        <div class="col-md-6 card1">
           <div class="glass">
             <h1 class="fw-bold">Abdelrahman Mohamed</h1>
             <p class="text-info">Front-End Developer</p>
@@ -109,22 +127,44 @@
     </div>
   </section>
 
+  <!-- Section About -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="title text-center">About Me</h2>
+      <p class="text-center text-secondary col-md-8 mx-auto">
+        I design and build modern, animated, and user-focused websites with strong visual impact.
+      </p>
+    </div>
+  </section>
+
   <!-- Skills -->
   <section class="section" id="skills">
     <div class="container">
       <h2 class="text-center mb-5">Skills</h2>
       <div class="row g-3">
-        <div class="col-6 col-md-3">
-          <div class="skill">HTML</div>
+        <div class="col-6 col-md-3 card1">
+          <div class="skill">
+            <img src="icon1.png" alt="img icon1" class="img-fluid">
+            <p class="pt-2">HTML.5</p>
+          </div>
         </div>
-        <div class="col-6 col-md-3">
-          <div class="skill">CSS</div>
+        <div class="col-6 col-md-3 card1">
+          <div class="skill">
+            <img src="icon2.png" alt="img icon2" class="img-fluid">
+            <p class="pt-2">CSS</p>
+          </div>
         </div>
-        <div class="col-6 col-md-3">
-          <div class="skill">JavaScript</div>
+        <div class="col-6 col-md-3 card1">
+          <div class="skill">
+            <img src="icon3.png" alt="img icon3" class="img-fluid">
+            <p class="pt-1">JavaScript</p>
+          </div>
         </div>
-        <div class="col-6 col-md-3">
-          <div class="skill">Bootstrap</div>
+        <div class="col-6 col-md-3 card1">
+          <div class="skill">
+            <img src="icon4.jpg" alt="img icon4" class="img-fluid">
+            <p class="pt-5">Bootstrap</p>
+          </div>
         </div>
       </div>
     </div>
@@ -135,19 +175,19 @@
     <div class="container">
       <h2 class="text-center mb-5">Projects</h2>
       <div class="row g-4">
-        <div class="col-md-4">
+        <div class="col-md-4 card1">
           <div class="card p-3">
             <h5>Portfolio Website</h5>
             <p>Personal responsive site</p>
           </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 card1">
           <div class="card p-3">
             <h5>Landing Page</h5>
             <p>Business layout</p>
           </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 card1">
           <div class="card p-3">
             <h5>To-Do App</h5>
             <p>JavaScript project</p>
@@ -180,11 +220,11 @@
       </form>
     </div>
   </section>
-
+  <!-- footer  -->
   <footer class="text-center py-4">
     &copy; 2026 Abdelrahman Mohamed
   </footer>
-
+  <!-- Coding JS form -->
   <script>
     const form = document.getElementById("contactForm");
 
@@ -217,6 +257,7 @@
       }
     });
   </script>
+  <!-- link JS  -->
   <script src="bootstrap.bundle.min.js"></script>
 
 </body>

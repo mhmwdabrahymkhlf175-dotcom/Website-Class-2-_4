@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <title>Mohamed Mahmoud | Premium Portfolio</title>
-   <link rel="shortcut icon" href="Mahmoud  (1).jpg" type="image/x-icon">
-  <meta name="description" content="Free Web tutorials Welcome To WE School Class 2/4">
-  <meta name="outhor" content="Engineer Mahmoud ibrahem">
+  <link rel="shortcut icon" href="محمد محمود.jpg" type="image/x-icon">
+  <meta name="description" content="We aim to provide valuable and useful information about Website Welcome To WE School Class 2/4 where we offer rich and diverse content that meets the needs of  our visitors and helps them better understand the topic">
+  <meta name="outhor" content="Engineer Mahmoud Ebrahim">
   <meta name="keywords" content="Html,css,JS,Coding Html and css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -14,6 +14,12 @@
   <link href="bootstrap.min.css" rel="stylesheet">
 
   <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
     /* Body & Font */
     body {
       margin: 0;
@@ -168,13 +174,15 @@
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
     <div class="container">
-      <a class="navbar-brand fs-4 fw-semibold  text-danger active" href="#">Mohamed Mahmoud</a>
+      <a class="navbar-brand fs-4 fw-semibold  text-danger active" href="#home">Mohamed Mahmoud</a>
       <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="nav">
         <ul class="navbar-nav ms-auto text-center">
-          <li class="nav-item"><a class="nav-link fs-4 fw-semibold active" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link fs-4 fw-semibold active" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link fs-4 fw-semibold" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link fs-4 fw-semibold" href="#skills">Skills</a></li>
           <li class="nav-item"><a class="nav-link fs-4 fw-semibold" href="#projects">Projects</a></li>
           <li class="nav-item"><a class="nav-link fs-4 fw-semibold" href="#contact">Contact</a></li>
         </ul>
@@ -183,7 +191,7 @@
   </nav>
 
   <!-- Hero -->
-  <section class="hero section fade-in">
+  <section class="hero section fade-in" id="home">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-md-6">
@@ -200,22 +208,47 @@
     </div>
   </section>
 
+  <!-- Section About -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="title text-center">About Me</h2>
+      <p class="text-center text-secondary col-md-8 mx-auto">
+        I design and build modern, animated, and user-focused websites with strong visual impact. Lorem ipsum dolor sit
+        amet consectetur adipisicing elit. Accusamus ducimus exercitationem odit reiciendis, pariatur mollitia
+        blanditiis ipsa corrupti maiores sit placeat cumque excepturi provident beatae, quod minima eligendi quidem
+        voluptates!
+      </p>
+    </div>
+  </section>
+
   <!-- Skills -->
   <section class="section fade-in" id="skills">
     <div class="container">
       <h2>Skills</h2>
-      <div class="row g-3 justify-content-center">
-        <div class="col-6 col-md-2">
-          <div class="skill">HTML</div>
+      <div class="row g-3">
+        <div class="col-6 col-md-3 ">
+          <div class="skill card">
+            <img src="icon1.png" alt="img icon1" class="img-fluid">
+            <p class="pt-2 text-dark">HTML.5</p>
+          </div>
         </div>
-        <div class="col-6 col-md-2">
-          <div class="skill">CSS</div>
+        <div class="col-6 col-md-3 ">
+          <div class="skill card">
+            <img src="icon2.png" alt="img icon2" class="img-fluid">
+            <p class="pt-2 text-dark">CSS</p>
+          </div>
         </div>
-        <div class="col-6 col-md-2">
-          <div class="skill">JavaScript</div>
+        <div class="col-6 col-md-3 ">
+          <div class="skill card">
+            <img src="icon3.png" alt="img icon3" class="img-fluid">
+            <p class="pt-2 text-dark">JavaScript</p>
+          </div>
         </div>
-        <div class="col-6 col-md-2">
-          <div class="skill">Bootstrap</div>
+        <div class="col-6 col-md-3 ">
+          <div class="skill card">
+            <img src="icon4.jpg" alt="img icon4" class="img-fluid">
+            <p class="pt-5 text-dark">Bootstrap</p>
+          </div>
         </div>
       </div>
     </div>

@@ -4,17 +4,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="img  (2).jpg" type="image/x-icon">
-  <meta name="description" content="Free Web tutorials Welcome To Eng WE School Class 2/4">
-  <meta name="outhor" content="Engineer Mahmoud ibrahem">
+  <link rel="shortcut icon" href="" type="image/x-icon">
+  <meta name="description" content="We aim to provide valuable and useful information about Website Welcome To WE School Class 2/4 where we offer rich and diverse content that meets the needs of  our visitors and helps them better understand the topic">
+  <meta name="outhor" content="Engineer Mahmoud Ebrahim">
   <meta name="keywords" content="Html,css,JS,Coding Html and css">
-  <title>Reem Ibrahim | Portfolio</title>
-
-
+  <title>Reem Ibrahim | Portfolio English Teacher</title>
+  <!-- link bootstrap -->
   <link href="bootstrap.min.css" rel="stylesheet">
+  <!-- link font-awesome -->
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap"
     rel="stylesheet">
   <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
     :root {
       --main: #0ff;
       --sec: #ff00ff;
@@ -755,6 +761,7 @@
 </head>
 
 <body>
+  <!-- navbar  -->
   <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
     <div class="container">
       <a class="navbar-brand fs-4 fw-semibold active" href="#">Reem Ibrahim</a>
@@ -771,7 +778,7 @@
       </div>
     </div>
   </nav>
-
+  <!-- hero section -->
   <section class="hero">
     <div class="container hero-content">
       <div class="row align-items-center">
@@ -791,7 +798,7 @@
       </div>
     </div>
   </section>
-
+  <!-- about section -->
   <section id="about" class="section">
     <div class="container">
       <h2 class="title">About Me</h2>
@@ -800,7 +807,7 @@
       </p>
     </div>
   </section>
-
+  <!-- cv section -->
   <section id="CV" class="section bg-dark">
     <div class="cv-container" id="cv">
       <!-- HEADER -->
@@ -867,7 +874,7 @@
       </div>
     </div>
   </section>
-
+  <!-- projects section -->
   <section id="projects" class="section">
     <div class="container">
       <h2 class="title">Projects</h2>
@@ -884,7 +891,6 @@
       </div>
     </div>
   </section>
-
   <!-- Contact -->
   <section id="contact" class="section">
     <div class="container">
@@ -908,10 +914,11 @@
       </form>
     </div>
   </section>
-
+  <!-- footer  -->
   <footer class="text-center py-4">
     &copy; 2025 Miss Reem Ibrahim
   </footer>
+  <!-- Coding JS Form -->
   <script>
     const form = document.getElementById("contactForm");
     const inputs = ["name", "email", "message"];
@@ -940,23 +947,6 @@
         form.reset();
       }
     });
-  </script>
-    <!-- 🔊 AUDIO -->
-  <audio id="bgMusic" loop>
-    <source src="رمش_خطاف_-_عمرو_دياب_-___2025_(Official_Music_Video)(M4A_128K).m4a" type="audio/mpeg">
-  </audio>
-  <script>
-    const music = document.getElementById("bgMusic");
-    music.volume = 0.4;
-
-    // أول تفاعل = تشغيل
-    document.addEventListener("click", () => {
-      music.play();
-    }, { once: true });
-
-    document.addEventListener("touchstart", () => {
-      music.play();
-    }, { once: true });
   </script>
   <script src="bootstrap.bundle.min.js"></script>
 </body>

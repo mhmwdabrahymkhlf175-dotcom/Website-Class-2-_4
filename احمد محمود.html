@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <link rel="shortcut icon" href="احمد منجر.jpg" type="image/x-icon">
-  <meta name="description" content="Free Web tutorials Welcome To WE School Class 2/4">
-  <meta name="outhor" content="Engineer Mahmoud ibrahem">
+  <meta name="description" content="We aim to provide valuable and useful information about Website Welcome To WE School Class 2/4 where we offer rich and diverse content that meets the needs of  our visitors and helps them better understand the topic">
+  <meta name="outhor" content="Engineer Mahmoud Ebrahim">
   <meta name="keywords" content="Html,css,JS,Coding Html and css">
   <title>Ahmed Mahmoud | Premium Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,6 +14,12 @@
   <link href="bootstrap.min.css" rel="stylesheet">
 
   <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
     /* Body & Font */
     body {
       margin: 0;
@@ -173,13 +179,15 @@
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
     <div class="container">
-      <a class="navbar-brand fs-4 fw-semibold active" href="#">Ahmed Mahmoud</a>
+      <a class="navbar-brand fs-4 fw-semibold active" href="#home">Ahmed Mahmoud</a>
       <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="nav">
         <ul class="navbar-nav ms-auto text-center">
-          <li class="nav-item"><a class="nav-link fs-4 fw-semibold active" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link fs-4 fw-semibold active" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link fs-4 fw-semibold" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link fs-4 fw-semibold" href="#skills">Skills</a></li>
           <li class="nav-item"><a class="nav-link fs-4 fw-semibold" href="#projects">Projects</a></li>
           <li class="nav-item"><a class="nav-link fs-4 fw-semibold" href="#contact">Contact</a></li>
         </ul>
@@ -188,7 +196,7 @@
   </nav>
 
   <!-- Hero -->
-  <section class="hero section fade-in">
+  <section class="hero section fade-in" id="home">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-md-6">
@@ -205,22 +213,49 @@
     </div>
   </section>
 
+  <!-- section about -->
+  <section id="about" class="section">
+    <h2 class="title">About Me</h2>
+    <p class="text-center col-md-8 mx-auto">I craft modern purple-themed websites with elegant glow and responsive
+      layouts.</p>
+  </section>
+
   <!-- Skills -->
   <section class="section fade-in" id="skills">
     <div class="container">
       <h2>Skills</h2>
       <div class="row g-3 justify-content-center">
         <div class="col-6 col-md-2">
-          <div class="skill">HTML</div>
+          <div class="skill">
+            <div class="skill">
+              <img src="icon1.png" alt="img HTML" class="img-fluid">
+              <p>HTML.5</p>
+            </div>
+          </div>
         </div>
         <div class="col-6 col-md-2">
-          <div class="skill">CSS</div>
+          <div class="skill">
+            <div class="skill">
+              <img src="icon2.png" alt="img CSS" class="img-fluid">
+              <p>CSS</p>
+            </div>
+          </div>
         </div>
         <div class="col-6 col-md-2">
-          <div class="skill">JavaScript</div>
+          <div class="skill">
+            <div class="skill">
+              <img src="icon3.png" alt="img JavaScript" class="img-fluid">
+              <p>JavaScript</p>
+            </div>
+          </div>
         </div>
         <div class="col-6 col-md-2">
-          <div class="skill">Bootstrap</div>
+          <div class="skill">
+            <div class="skill">
+              <img src="icon4.jpg" alt="img Bootstrap" class="img-fluid">
+              <p>Bootstrap</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -233,20 +268,20 @@
       <div class="row g-4 justify-content-center">
         <div class="col-md-4">
           <div class="card">
-            <h5>Portfolio Website</h5>
-            <p>Elegant Gradient Design</p>
+            <h5 class="text-light">Portfolio Website</h5>
+            <p class="text-light">Elegant Gradient Design</p>
           </div>
         </div>
         <div class="col-md-4">
           <div class="card">
-            <h5>Landing Page</h5>
-            <p>Professional UI</p>
+            <h5 class="text-light">Landing Page</h5>
+            <p class="text-light">Professional UI</p>
           </div>
         </div>
         <div class="col-md-4">
           <div class="card">
-            <h5>To-Do App</h5>
-            <p>Interactive JS Project</p>
+            <h5 class="text-light">To-Do App</h5>
+            <p class="text-light">Interactive JS Project</p>
           </div>
         </div>
       </div>
@@ -272,11 +307,11 @@
       </form>
     </div>
   </section>
-
-  <footer class="text-center py-4 text-muted">
+  <!-- footer  -->
+  <footer class="text-center py-4 text-light">
     &copy; 2026 Ahmed Mahmoud
   </footer>
-
+  <!-- Coding JavaScript form -->
   <script>
     // Form Validation
     const form = document.getElementById("contactForm");
@@ -315,6 +350,7 @@
     }, appearOptions);
     faders.forEach(fader => appearOnScroll.observe(fader));
   </script>
+  <!-- link JavaScript -->
   <script src="bootstrap.bundle.min.js"></script>
 
 </body>

@@ -3,14 +3,21 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="shortcut icon" href="CV Eng/img/النسر.jpg" type="image/x-icon">
-  <meta name="description" content="Free Web tutorials Eng Evaluation Of The Website">
-  <meta name="outhor" content="Engineer Mahmoud ibrhem">
+  <link rel="shortcut icon" href="Mahmoud  (1).jpg" type="image/x-icon">
+  <meta name="description"
+    content="We aim to provide valuable and useful information about Website Welcome To WE School Class 2/4 where we offer rich and diverse content that meets the needs of  our visitors and helps them better understand the topic">
+  <meta name="outhor" content="Engineer Mahmoud Ebrahim">
   <meta name="keywords" content="Html,css,JS,Coding Html and css">
   <title>Eng Evaluation Of The Website</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="bootstrap.min.css" rel="stylesheet">
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     /* تأثير السحب/المسح عند الحذف */
     .dynamic-review .card {
       cursor: pointer;
@@ -47,9 +54,9 @@
 
 <body class="bg-dark">
 
+
   <div class="container my-5">
     <h2 class="text-center mb-4 text-light">⭐ Eng Evaluation Of The Website</h2>
-
     <!-- Review Form -->
     <div class="row justify-content-center mb-4">
       <div class="col-md-6">
@@ -57,7 +64,7 @@
           <div class="card-body">
             <h5 class="card-title text-center mb-3">Add Your Review</h5>
 
-            <form id="reviewForm">
+            <form id="reviewForm" action="https://api.sheetmonkey.io/form/93i8znffDuJVvTTBquYKRr">
               <div class="mb-3">
                 <label class="form-label">Your Name</label>
                 <input type="text" class="form-control" id="reviewName" placeholder="Enter your name" required>
@@ -199,7 +206,7 @@
         </div>
       </div>
 
-        <!-- Reviews Display -->
+      <!-- Reviews Display -->
       <div class="col-md-4 mb-3">
         <div class="card h-100 shadow-sm">
           <div class="card-body text-center">
@@ -309,12 +316,13 @@
         </div>
       </div>
 
+    </div>
+
   </div>
-
-
   <!-- Bootstrap JS -->
   <script src="bootstrap.bundle.min.js"></script>
 
+  <!-- coding JS  -->
   <script>
     const reviewForm = document.getElementById("reviewForm");
     const reviewsContainer = document.getElementById("reviewsContainer");

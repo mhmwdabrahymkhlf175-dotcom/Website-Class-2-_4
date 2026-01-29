@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="shortcut icon" href="img (2).jpg" type="image/x-icon">
-  <meta name="description" content="Free Web tutorials Welcome To Eng WE School Class 2/4">
-  <meta name="outhor" content="Engineer Mahmoud ibrhem">
+  <link rel="shortcut icon" href="img (1).jpg" type="image/x-icon">
+  <meta name="description" content="We aim to provide valuable and useful information about Website Welcome To WE School Class 2/4 where we offer rich and diverse content that meets the needs of  our visitors and helps them better understand the topic">
+  <meta name="outhor" content="Engineer Mahmoud Ebrahim">
   <meta name="keywords" content="Html,css,JS,Coding Html and css">
-  <title>Reem Ibrahim - English Teacher CV</title>
+  <title>Anhar Salah</title>
 
   <!-- link Bootstrap -->
   <link href="bootstrap.min.css" rel="stylesheet">
@@ -18,8 +17,6 @@
 
   <!--  link Font Awesome -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-
-
   <style>
     * {
       margin: 0;
@@ -48,6 +45,141 @@
       }
     }
 
+    /* Navbar */
+    .navbar-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 15px 30px;
+      position: fixed;
+      width: 100%;
+      z-index: 999;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .navbar-top .brand {
+      font-weight: 800;
+      font-size: 1.8rem;
+      color: #ff6fcf;
+    }
+
+    .navbar-top .menu-btn {
+      font-size: 1.8rem;
+      cursor: pointer;
+      display: none;
+      color: #ff6fcf;
+    }
+
+    @media (max-width: 768px) {
+      .navbar-top .menu-btn {
+        display: block;
+      }
+    }
+
+    /* Offcanvas */
+    .offcanvas-body a {
+      color: #ff6fcf;
+      font-weight: 600;
+      margin: 12px 0;
+      display: block;
+      font-size: 1.3rem;
+      text-decoration: none;
+    }
+
+    .offcanvas-body a:hover {
+      color: #ffb3e6;
+      transition: 0.3s;
+    }
+
+    /* Hero Section */
+    .hero {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      margin-top: 70px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      background: linear-gradient(45deg, #ff6fcf, #ffb3e6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 10px rgba(255, 111, 207, 0.5);
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-top: 15px;
+      color: #fff;
+      text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Profile Image with Animated Dashed Border */
+    .profile-container {
+      position: relative;
+      margin-top: 25px;
+    }
+
+    .profile-container img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      position: relative;
+      z-index: 2;
+      object-fit: cover;
+    }
+
+
+    /* Stats */
+    .stats {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 35px;
+    }
+
+    .stat-item {
+      text-align: center;
+    }
+
+    .stat-item h3 {
+      font-size: 2rem;
+      background: linear-gradient(45deg, #ff6fcf, #ffb3e6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 5px;
+    }
+
+    .stat-item p {
+      font-size: 0.95rem;
+      color: #fff;
+    }
+
+    /* Social Media Buttons */
+    .social-buttons a {
+      margin: 5px;
+      font-size: 1.4rem;
+      color: #fff;
+      padding: 10px 15px;
+      border-radius: 50px;
+      background: linear-gradient(45deg, #ff6fcf, #ffb3e6);
+      display: inline-block;
+      transition: 0.3s;
+    }
+
+    .social-buttons a:hover {
+      transform: scale(1.2);
+      color: #fff;
+    }
+
+    /* cv */
     .cv-container {
       max-width: 1000px;
       margin: auto;
@@ -166,142 +298,8 @@
       }
     }
 
-    /* Navbar */
-    .navbar-top {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: rgba(255, 255, 255, 0.1);
-      padding: 15px 30px;
-      position: fixed;
-      width: 100%;
-      z-index: 999;
-      backdrop-filter: blur(10px);
-      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
-    }
 
-    .navbar-top .brand {
-      font-weight: 800;
-      font-size: 1.8rem;
-      color: #ff6fcf;
-    }
-
-    .navbar-top .menu-btn {
-      font-size: 1.8rem;
-      cursor: pointer;
-      display: none;
-      color: #ff6fcf;
-    }
-
-    @media (max-width: 768px) {
-      .navbar-top .menu-btn {
-        display: block;
-      }
-    }
-
-    /* Offcanvas */
-    .offcanvas-body a {
-      color: #ff6fcf;
-      font-weight: 600;
-      margin: 12px 0;
-      display: block;
-      font-size: 1.3rem;
-      text-decoration: none;
-    }
-
-    .offcanvas-body a:hover {
-      color: #ffb3e6;
-      transition: 0.3s;
-    }
-
-    /* Hero Section */
-    .hero {
-      min-height: 90vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 20px;
-      margin-top: 70px;
-    }
-
-    .hero h1 {
-      font-size: 3rem;
-      font-weight: 800;
-      background: linear-gradient(45deg, #ff6fcf, #ffb3e6);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      text-shadow: 0 0 10px rgba(255, 111, 207, 0.5);
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-      margin-top: 15px;
-      color: #fff;
-      text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-    }
-
-    /* Profile Image with Animated Dashed Border */
-    .profile-container {
-      position: relative;
-      margin-top: 25px;
-    }
-
-    .profile-container img {
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      position: relative;
-      z-index: 2;
-      object-fit: cover;
-    }
-
-
-    /* Stats */
-    .stats {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 40px;
-      margin-top: 35px;
-    }
-
-    .stat-item {
-      text-align: center;
-    }
-
-    .stat-item h3 {
-      font-size: 2rem;
-      background: linear-gradient(45deg, #ff6fcf, #ffb3e6);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      margin-bottom: 5px;
-    }
-
-    .stat-item p {
-      font-size: 0.95rem;
-      color: #fff;
-    }
-
-    /* Social Media Buttons */
-    .social-buttons a {
-      margin: 5px;
-      font-size: 1.4rem;
-      color: #fff;
-      padding: 10px 15px;
-      border-radius: 50px;
-      background: linear-gradient(45deg, #ff6fcf, #ffb3e6);
-      display: inline-block;
-      transition: 0.3s;
-    }
-
-    .social-buttons a:hover {
-      transform: scale(1.2);
-      color: #fff;
-    }
-
-    /* Sections */
+    /* Contact Us */
     .section {
       padding: 60px 20px;
     }
@@ -522,36 +520,26 @@
     }
   </style>
 </head>
-
 <body>
   <!-- Navbar -->
-  <nav class="navbar navbar-dark bg-dark sticky-top">
+  <nav class="navbar navbar-dark bg-danger sticky-top">
     <div class="container">
       <a class="navbar-brand fw-bold" href="#home">
-        <img src="img (1).jpg" alt="img" class="img-fluid rounded-circle shadow-lg" style="width: 100px;">
+        <img src="img (1).jpg" alt="img Anhar Salah" class="img-fluid rounded-circle shadow-lg" style="width: 100px;">
         Anhar Salah
       </a>
       <!-- الروابط على الشاشات الكبيرة -->
       <ul class="navbar-nav d-none d-lg-flex flex-row ms-auto">
-        <li class="nav-item"><a class="nav-link fw-bolder btn btn-outline-success   p-2 fs-5 active text-capitalize"
+        <li class="nav-item"><a class="nav-link fw-bolder btn btn-outline-warning   p-2 fs-5 active text-capitalize"
             href="#home">Home</a>
         </li>
-        <li class="nav-item"><a class="nav-link fw-bolder btn btn-outline-success p-2 fs-5 text-capitalize"
+        <li class="nav-item"><a class="nav-link fw-bolder btn btn-outline-primary p-2 fs-5 text-capitalize"
             href="#about">About</a>
         </li>
-        <li class="nav-item"><a class="nav-link fw-bolder btn btn-outline-success p-2 fs-5 text-capitalize"
-            href="#education">Education</a>
-        </li>
-        <li class="nav-item"><a class="nav-link fw-bolder btn btn-outline-success p-2 fs-5 text-capitalize"
-            href="#experience">Experience</a>
-        </li>
-        <li class="nav-item"><a class="nav-link fw-bolder btn btn-outline-success p-2 fs-5 text-capitalize"
-            href="#projects">Projects</a>
-        </li>
-        <li class="nav-item"><a class="nav-link fw-bolder btn btn-outline-success p-2 fs-5 text-capitalize"
+        <li class="nav-item"><a class="nav-link fw-bolder btn btn-outline-secondary p-2 fs-5 text-capitalize"
             href="#cv">CV</a>
         </li>
-        <li class="nav-item"><a class="nav-link fw-bolder btn btn-outline-success p-2 fs-5 text-capitalize"
+        <li class="nav-item"><a class="nav-link fw-bolder btn btn-outline-info p-2 fs-5 text-capitalize"
             href="#contact">Contact</a>
         </li>
       </ul>
@@ -567,7 +555,7 @@
   <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar">
     <div class="offcanvas-header">
       <a class="navbar-brand fw-bold" href="#home">
-        <img src="img (1).jpg" alt="img" class="img-fluid rounded-circle shadow-lg" style="width: 100px;">
+        <img src="img (1).jpg" alt="img Anhar Salah" class="img-fluid rounded-circle shadow-lg" style="width: 100px;">
         Anhar Salah
       </a>
       <!-- زر X لقفل -->
@@ -575,25 +563,16 @@
     </div>
     <div class="offcanvas-body">
       <ul class="navbar-nav justify-content-end flex-grow-1">
-        <li class="nav-item pt-2"><a class="nav-link fw-bolder btn btn-outline-success p-2 fs-5 active text-capitalize"
+        <li class="nav-item"><a class="nav-link fw-bolder btn btn-outline-warning   p-2 fs-5 active text-capitalize"
             href="#home">Home</a>
         </li>
-        <li class="nav-item pt-2"><a class="nav-link fw-bolder btn btn-outline-success p-2 fs-5 text-capitalize"
+        <li class="nav-item"><a class="nav-link fw-bolder btn btn-outline-primary p-2 fs-5 text-capitalize"
             href="#about">About</a>
         </li>
-        <li class="nav-item pt-2"><a class="nav-link fw-bolder btn btn-outline-success p-2 fs-5 text-capitalize"
-            href="#education">Education</a>
-        </li>
-        <li class="nav-item pt-2"><a class="nav-link fw-bolder btn btn-outline-success p-2 fs-5 text-capitalize"
-            href="#experience">Experience</a>
-        </li>
-        <li class="nav-item pt-2"><a class="nav-link fw-bolder btn btn-outline-success p-2 fs-5 text-capitalize"
-            href="#projects">Projects</a>
-        </li>
-        <li class="nav-item pt-2"><a class="nav-link fw-bolder btn btn-outline-success p-2 fs-5 text-capitalize"
+        <li class="nav-item"><a class="nav-link fw-bolder btn btn-outline-secondary p-2 fs-5 text-capitalize"
             href="#cv">CV</a>
         </li>
-        <li class="nav-item pt-2"><a class="nav-link fw-bolder btn btn-outline-success p-2 fs-5 text-capitalize"
+        <li class="nav-item"><a class="nav-link fw-bolder btn btn-outline-info p-2 fs-5 text-capitalize"
             href="#contact">Contact</a>
         </li>
       </ul>
@@ -608,27 +587,20 @@
     <!-- Left Side: Text -->
     <div class="hero-text text-md-start text-center mb-4 mb-md-0" style="flex:1;">
       <h1>Anhar Salah</h1>
-
-
       <!-- Stats -->
       <div class="stats d-flex flex-wrap justify-content-start gap-4 mt-3">
         <div class="stat-item text-start">
-          <h3 class="counter" data-target="12">0</h3>
+          <h3 class="counter" data-target="5">0</h3>
           <p class="text-black">Years of Experience</p>
         </div>
         <div class="stat-item text-start">
-          <h3 class="counter" data-target="26">0</h3>
+          <h3 class="counter" data-target="50">0</h3>
           <p class="text-black">Projects Completed</p>
         </div>
         <div class="stat-item text-start">
-          <h3 class="counter" data-target="8">0</h3>
+          <h3 class="counter" data-target="100">0</h3>
           <p class="text-black">Awards</p>
         </div>
-        <div class="stat-item text-start">
-          <h3 class="counter" data-target="500">0</h3>
-          <p class="text-black">Code Created</p>
-        </div>
-
         <!-- Social Media Buttons -->
         <div class="social-buttons d-flex flex-wrap justify-content-center">
           <a href="https://github.com/YOUR_GITHUB" target="_blank"><i class="fab fa-github"></i></a>
@@ -642,12 +614,11 @@
         </div>
       </div>
     </div>
-
     <!-- Right Side: Image + Social -->
     <div class="hero-image d-flex flex-column align-items-center" style="flex:1;">
       <!-- Profile Image with Dashed Animated Border -->
       <div class="profile-container mb-3">
-        <img src="img (1).jpg" alt="Profile" style="width: 70vh; height: 70vh;">
+        <img src="img (1).jpg" alt="Profile" style="width: 40vh; height: 40vh;">
       </div>
 
 
@@ -660,95 +631,99 @@
       modeling. Skilled in creating interactive lessons, guiding students through technical drawings, and improving
       their 3D modeling skills.</p>
   </section>
+  <!-- cv  -->
+  <div class="cv-container" id="cv">
 
-    <div class="cv-container" id="cv">
-
-      <div class="header">
-        <img src="img (1).jpg" alt="Profile Photo">
-        <div class="info">
-          <h1>Anhar Salah</h1>
-          <p>AutoCAD Teacher</p>
-          <p><i class="fa fa-envelope"></i> example@gmail.com</p>
-          <p><i class="fa fa-phone"></i> +20 10X XXX XXXX</p>
-        </div>
-      </div>
-
-      <div class="main-content">
-
-        <div class="left-panel">
-          <div class="section-title">Skills</div>
-          <ul>
-            <li><i class="fa fa-check-circle"></i> AutoCAD Drawing & Modeling</li>
-            <li><i class="fa fa-check-circle"></i> 3D Modeling</li>
-            <li><i class="fa fa-check-circle"></i> Technical Drawing</li>
-            <li><i class="fa fa-check-circle"></i> Lesson Planning</li>
-            <li><i class="fa fa-check-circle"></i> Student Assessment</li>
-          </ul>
-
-          <div class="section-title">Languages</div>
-          <ul>
-            <li><i class="fa fa-language"></i> Arabic – Native</li>
-            <li><i class="fa fa-language"></i> English – Excellent</li>
-          </ul>
-        </div>
-
-        <div class="right-panel">
-          <div class="section-title">Professional Profile</div>
-          <p>Dedicated AutoCAD Teacher with extensive experience teaching design and modeling. Skilled in creating
-            interactive lessons, guiding students through technical drawings, and improving their 3D modeling skills.
-          </p>
-
-          <div class="section-title">Education</div>
-          <p>Bachelor of Engineering / Computer-Aided Design<br><span class="small-text">Faculty of Engineering</span>
-          </p>
-
-          <div class="section-title">Experience</div>
-          <ul>
-            <li>Teaching AutoCAD to Secondary and College students</li>
-            <li>Preparing lesson plans and CAD exercises</li>
-            <li>Guiding students in 2D and 3D modeling</li>
-            <li>Assessing students through projects and assignments</li>
-            <li>Encouraging creative and technical thinking</li>
-          </ul>
-
-          <div class="section-title">Achievements & Activities</div>
-          <ul>
-            <li>Organized CAD workshops and competitions</li>
-            <li>Participated in professional development programs</li>
-            <li>Mentored students in design projects and technical assignments</li>
-          </ul>
-        </div>
-
+    <div class="header">
+      <img src="img (1).jpg" alt="Profile Photo">
+      <div class="info">
+        <h1>Anhar Salah</h1>
+        <p>AutoCAD Teacher</p>
+        <p><i class="fa fa-envelope"></i> example@gmail.com</p>
+        <p><i class="fa fa-phone"></i> +20 10X XXX XXXX</p>
       </div>
     </div>
-    <section id="contact" class="section">
-      <h2>Contact Me</h2>
-      <div class="text-center">
-        <p>Email: Anhar Salah @gmail.com</p>
-        <p>Phone: +20 XXX XXX </p>
+
+    <div class="main-content">
+
+      <div class="left-panel">
+        <div class="section-title">Skills</div>
+        <ul>
+          <li><i class="fa fa-check-circle"></i> AutoCAD Drawing & Modeling</li>
+          <li><i class="fa fa-check-circle"></i> 3D Modeling</li>
+          <li><i class="fa fa-check-circle"></i> Technical Drawing</li>
+          <li><i class="fa fa-check-circle"></i> Lesson Planning</li>
+          <li><i class="fa fa-check-circle"></i> Student Assessment</li>
+        </ul>
+
+        <div class="section-title">Languages</div>
+        <ul>
+          <li><i class="fa fa-language"></i> Arabic – Native</li>
+          <li><i class="fa fa-language"></i> English – Excellent</li>
+        </ul>
       </div>
-    </section>
-    <footer style="margin-top: 10vh;">
-      <p>&copy; 2025 Anhar Salah | All Rights Reserved</p>
-    </footer>
-    <script src="bootstrap.bundle.min.js"></script>
-    <script>
-      const counters = document.querySelectorAll('.counter');
-      counters.forEach(counter => {
-        const updateCount = () => {
-          const target = +counter.getAttribute('data-target');
-          const count = +counter.innerText;
-          const increment = target / 200;
-          if (count < target) {
-            counter.innerText = Math.ceil(count + increment);
-            setTimeout(updateCount, 20);
-          } else {
-            counter.innerText = target;
-          }
-        };
-        updateCount();
-      });
-    </script>
+
+      <div class="right-panel">
+        <div class="section-title">Professional Profile</div>
+        <p>Dedicated AutoCAD Teacher with extensive experience teaching design and modeling. Skilled in creating
+          interactive lessons, guiding students through technical drawings, and improving their 3D modeling skills.
+        </p>
+
+        <div class="section-title">Education</div>
+        <p>Bachelor of Engineering / Computer-Aided Design<br><span class="small-text">Faculty of Engineering</span>
+        </p>
+
+        <div class="section-title">Experience</div>
+        <ul>
+          <li>Teaching AutoCAD to Secondary and College students</li>
+          <li>Preparing lesson plans and CAD exercises</li>
+          <li>Guiding students in 2D and 3D modeling</li>
+          <li>Assessing students through projects and assignments</li>
+          <li>Encouraging creative and technical thinking</li>
+        </ul>
+
+        <div class="section-title">Achievements & Activities</div>
+        <ul>
+          <li>Organized CAD workshops and competitions</li>
+          <li>Participated in professional development programs</li>
+          <li>Mentored students in design projects and technical assignments</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+  <!-- contact Us -->
+  <section id="contact" class="section">
+    <h2>Contact Me</h2>
+    <div class="text-center">
+      <p>Email: Anhar Salah @gmail.com</p>
+      <p>Phone: +20 XXX XXX </p>
+    </div>
+  </section>
+  <!-- footer  -->
+  <footer style="margin-top: 10vh;">
+    <p>&copy; 2025 Anhar Salah | All Rights Reserved</p>
+  </footer>
+  <!-- link bootstrap -->
+  <script src="bootstrap.bundle.min.js"></script>
+  <!-- code JS  -->
+  <script>
+    const counters = document.querySelectorAll('.counter');
+    counters.forEach(counter => {
+      const updateCount = () => {
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.innerText;
+        const increment = target / 200;
+        if (count < target) {
+          counter.innerText = Math.ceil(count + increment);
+          setTimeout(updateCount, 20);
+        } else {
+          counter.innerText = target;
+        }
+      };
+      updateCount();
+    });
+  </script>
 </body>
 
 </html>

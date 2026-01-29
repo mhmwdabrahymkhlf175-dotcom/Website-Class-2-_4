@@ -6,11 +6,17 @@
   <title>Youssef Ahmed | Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="يوسف احمد.jpg" type="image/x-icon">
-  <meta name="description" content="Free Web tutorials Welcome To WE School Class 2/4">
-  <meta name="outhor" content="Engineer Mahmoud ibrahem">
+  <meta name="description" content="We aim to provide valuable and useful information about Website Welcome To WE School Class 2/4 where we offer rich and diverse content that meets the needs of  our visitors and helps them better understand the topic">
+  <meta name="outhor" content="Engineer Mahmoud Ebrahim">
   <meta name="keywords" content="Html,css,JS,Coding Html and css">
   <link href="bootstrap.min.css" rel="stylesheet">
   <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
     :root {
       --main: #1e90ff;
       --sec: #00bfff;
@@ -103,15 +109,17 @@
 </head>
 
 <body>
+  <!-- navbar -->
   <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
     <div class="container">
-      <a class="navbar-brand fs-4 fw-semibold active" href="#">Youssef Ahmed</a>
+      <a class="navbar-brand fs-4 fw-semibold active" href="#home">Youssef Ahmed</a>
       <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="nav">
         <ul class="navbar-nav ms-auto text-center">
-          <li class="nav-item"><a class="nav-link fs-4 fw-semibold active" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link fs-4 fw-semibold active" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link fs-4 fw-semibold" href="#about">About</a></li>
           <li class="nav-item"><a class="nav-link fs-4 fw-semibold" href="#skills">Skills</a></li>
           <li class="nav-item"><a class="nav-link fs-4 fw-semibold" href="#projects">Projects</a></li>
           <li class="nav-item"><a class="nav-link fs-4 fw-semibold" href="#contact">Contact</a></li>
@@ -119,7 +127,7 @@
       </div>
     </div>
   </nav>
-
+  <!-- section hero -->
   <section class="hero">
     <div>
       <img src="يوسف احمد.jpg" class="img-fluid rounded-circle shadow-lg" style="width: 400px; height: 400px;">
@@ -128,14 +136,14 @@
     <p class="lead">Minimal Frontend Developer<br>Clean & Blue Theme</p>
     <a href="#contact" class="btn btn-main mt-3">Hire Me</a>
   </section>
-
+  <!-- section about -->
   <section id="about" class="section">
     <h2 class="title">About Me</h2>
     <p class="text-center col-md-8 mx-auto">I develop clean and minimalistic websites with calm blue tones and smooth
       UX.</p>
   </section>
-
-  <section id="skills" class="section">
+  <!-- section Skills -->
+  <section id="skills" class="section container">
     <h2 class="title">Skills</h2>
     <label>HTML & CSS</label>
     <div class="progress mb-4">
@@ -150,22 +158,30 @@
       <div class="progress-bar" style="width:85%"></div>
     </div>
   </section>
-
+  <!-- section projects -->
   <section id="projects" class="section">
     <h2 class="title">Projects</h2>
-    <div class="row g-4">
-      <div class="col-md-4">
-        <div class="cardx text-center">Portfolio</div>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="cardx text-center">
+            <h5>Portfolio Website</h5>
+            <p>Clean & responsive design</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="cardx text-center">
+            <h5>Landing Page</h5>
+            <p>Business website layout</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="cardx text-center">
+            <h5>To-Do App</h5>
+            <p>JavaScript project</p>
+          </div>
+        </div>
       </div>
-      <div class="col-md-4">
-        <div class="cardx text-center">Landing Page</div>
-      </div>
-      <div class="col-md-4">
-        <div class="cardx text-center">Business Site</div>
-      </div>
-    </div>
   </section>
-
   <!-- Contact -->
   <section id="contact" class="section">
     <div class="container">
@@ -189,8 +205,9 @@
       </form>
     </div>
   </section>
-
+  <!-- footer -->
   <footer class="text-center py-4">&copy; 2025 Youssef Ahmed</footer>
+  <!-- link JS form -->
   <script>
     const form = document.getElementById("contactForm");
     const inputs = ["name", "email", "message"];
@@ -220,6 +237,7 @@
       }
     });
   </script>
+  <!-- link JS -->
   <script src="bootstrap.bundle.min.js"></script>
 </body>
 

@@ -5,8 +5,8 @@
   <meta charset="UTF-8">
   <title>Omar Saad | Professional Portfolio</title>
   <link rel="shortcut icon" href="عمر سعد.jpg" type="image/x-icon">
-  <meta name="description" content="Free Web tutorials Welcome To WE School Class 2/4">
-  <meta name="outhor" content="Engineer Mahmoud ibrahem">
+  <meta name="description" content="We aim to provide valuable and useful information about Website Welcome To WE School Class 2/4 where we offer rich and diverse content that meets the needs of  our visitors and helps them better understand the topic">
+  <meta name="outhor" content="Engineer Mahmoud Ebrahim">
   <meta name="keywords" content="Html,css,JS,Coding Html and css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -21,7 +21,10 @@
 
   <style>
     * {
-      scroll-behavior: smooth
+      scroll-behavior: smooth;
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
     }
 
     body {
@@ -129,7 +132,7 @@
       color: #94a3b8;
     }
 
-        /* Contact Form */
+    /* Contact Form */
     .error {
       color: #ff4d4d;
       font-size: 13px;
@@ -158,13 +161,14 @@
   <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
     <div class="container">
-      <a class="navbar-brand fw-bold" href="#">Omar Saad</a>
+      <a class="navbar-brand fw-bold" href="#home">Omar Saad</a>
       <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="menu">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link fs-4 fw-semibold active" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link fs-4 fw-semibold active" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link fs-4 fw-semibold" href="#about">About</a></li>
           <li class="nav-item"><a class="nav-link fs-4 fw-semibold" href="#skills">Skills</a></li>
           <li class="nav-item"><a class="nav-link fs-4 fw-semibold" href="#projects">Projects</a></li>
           <li class="nav-item"><a class="nav-link fs-4 fw-semibold" href="#contact">Contact</a></li>
@@ -174,9 +178,9 @@
   </nav>
 
   <!-- HERO -->
-  <section class="hero d-flex align-items-center text-center">
+  <section class="hero d-flex align-items-center text-center" id="home">
     <div class="container" data-aos="fade-up">
-      <img src="عمر سعد.jpg">
+      <img src="عمر سعد.jpg" alt="img Omer">
       <h1 class="mt-4 fw-bold">Omar Saad</h1>
       <p class="lead">Creative Web Developer</p>
       <a href="#contact" class="btn btn-main mt-3">Hire Me</a>
@@ -276,12 +280,16 @@
       </form>
     </div>
   </section>
+
+  <!-- footer -->
   <footer class="text-center py-4">
     &copy; 2025 Omar Saad | Designed with
   </footer>
 
   <!-- JS -->
   <script src="bootstrap.bundle.min.js"></script>
+
+  <!-- Coding JS form -->
   <script>
     const form = document.getElementById("contactForm");
     const inputs = ["name", "email", "message"];
@@ -311,7 +319,11 @@
       }
     });
   </script>
+  
+  <!-- link JS  -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <!-- Coding JS  -->
   <script>
     AOS.init({
       duration: 1200,
